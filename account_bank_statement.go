@@ -6,46 +6,27 @@ import (
 
 // AccountBankStatement represents account.bank.statement model.
 type AccountBankStatement struct {
-	LastUpdate               *Time      `xmlrpc:"__last_update,omptempty"`
-	AllLinesReconciled       *Bool      `xmlrpc:"all_lines_reconciled,omptempty"`
-	BalanceEnd               *Float     `xmlrpc:"balance_end,omptempty"`
-	BalanceEndReal           *Float     `xmlrpc:"balance_end_real,omptempty"`
-	BalanceStart             *Float     `xmlrpc:"balance_start,omptempty"`
-	CashboxEndId             *Many2One  `xmlrpc:"cashbox_end_id,omptempty"`
-	CashboxStartId           *Many2One  `xmlrpc:"cashbox_start_id,omptempty"`
-	CompanyId                *Many2One  `xmlrpc:"company_id,omptempty"`
-	CreateDate               *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid                *Many2One  `xmlrpc:"create_uid,omptempty"`
-	CurrencyId               *Many2One  `xmlrpc:"currency_id,omptempty"`
-	Date                     *Time      `xmlrpc:"date,omptempty"`
-	DateDone                 *Time      `xmlrpc:"date_done,omptempty"`
-	Difference               *Float     `xmlrpc:"difference,omptempty"`
-	DisplayName              *String    `xmlrpc:"display_name,omptempty"`
-	Id                       *Int       `xmlrpc:"id,omptempty"`
-	IsDifferenceZero         *Bool      `xmlrpc:"is_difference_zero,omptempty"`
-	JournalId                *Many2One  `xmlrpc:"journal_id,omptempty"`
-	JournalType              *Selection `xmlrpc:"journal_type,omptempty"`
-	LineIds                  *Relation  `xmlrpc:"line_ids,omptempty"`
-	MessageChannelIds        *Relation  `xmlrpc:"message_channel_ids,omptempty"`
-	MessageFollowerIds       *Relation  `xmlrpc:"message_follower_ids,omptempty"`
-	MessageIds               *Relation  `xmlrpc:"message_ids,omptempty"`
-	MessageIsFollower        *Bool      `xmlrpc:"message_is_follower,omptempty"`
-	MessageLastPost          *Time      `xmlrpc:"message_last_post,omptempty"`
-	MessageNeedaction        *Bool      `xmlrpc:"message_needaction,omptempty"`
-	MessageNeedactionCounter *Int       `xmlrpc:"message_needaction_counter,omptempty"`
-	MessagePartnerIds        *Relation  `xmlrpc:"message_partner_ids,omptempty"`
-	MessageUnread            *Bool      `xmlrpc:"message_unread,omptempty"`
-	MessageUnreadCounter     *Int       `xmlrpc:"message_unread_counter,omptempty"`
-	MoveLineCount            *Int       `xmlrpc:"move_line_count,omptempty"`
-	MoveLineIds              *Relation  `xmlrpc:"move_line_ids,omptempty"`
-	Name                     *String    `xmlrpc:"name,omptempty"`
-	Reference                *String    `xmlrpc:"reference,omptempty"`
-	State                    *Selection `xmlrpc:"state,omptempty"`
-	TotalEntryEncoding       *Float     `xmlrpc:"total_entry_encoding,omptempty"`
-	UserId                   *Many2One  `xmlrpc:"user_id,omptempty"`
-	WebsiteMessageIds        *Relation  `xmlrpc:"website_message_ids,omptempty"`
-	WriteDate                *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid                 *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate     *Time     `xmlrpc:"__last_update,omptempty"`
+	AttachmentIds  *Relation `xmlrpc:"attachment_ids,omptempty"`
+	BalanceEnd     *Float    `xmlrpc:"balance_end,omptempty"`
+	BalanceEndReal *Float    `xmlrpc:"balance_end_real,omptempty"`
+	BalanceStart   *Float    `xmlrpc:"balance_start,omptempty"`
+	CompanyId      *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate     *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid      *Many2One `xmlrpc:"create_uid,omptempty"`
+	CurrencyId     *Many2One `xmlrpc:"currency_id,omptempty"`
+	Date           *Time     `xmlrpc:"date,omptempty"`
+	DisplayName    *String   `xmlrpc:"display_name,omptempty"`
+	FirstLineIndex *String   `xmlrpc:"first_line_index,omptempty"`
+	Id             *Int      `xmlrpc:"id,omptempty"`
+	IsComplete     *Bool     `xmlrpc:"is_complete,omptempty"`
+	IsValid        *Bool     `xmlrpc:"is_valid,omptempty"`
+	JournalId      *Many2One `xmlrpc:"journal_id,omptempty"`
+	LineIds        *Relation `xmlrpc:"line_ids,omptempty"`
+	Name           *String   `xmlrpc:"name,omptempty"`
+	Reference      *String   `xmlrpc:"reference,omptempty"`
+	WriteDate      *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid       *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountBankStatements represents array of account.bank.statement model.

@@ -9,62 +9,70 @@ type StockMove struct {
 	LastUpdate               *Time      `xmlrpc:"__last_update,omptempty"`
 	AccountMoveIds           *Relation  `xmlrpc:"account_move_ids,omptempty"`
 	Additional               *Bool      `xmlrpc:"additional,omptempty"`
+	AnalyticAccountLineId    *Many2One  `xmlrpc:"analytic_account_line_id,omptempty"`
 	Availability             *Float     `xmlrpc:"availability,omptempty"`
-	BackorderId              *Many2One  `xmlrpc:"backorder_id,omptempty"`
 	CompanyId                *Many2One  `xmlrpc:"company_id,omptempty"`
 	CreateDate               *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid                *Many2One  `xmlrpc:"create_uid,omptempty"`
-	CreatedPurchaseLineId    *Many2One  `xmlrpc:"created_purchase_line_id,omptempty"`
 	Date                     *Time      `xmlrpc:"date,omptempty"`
-	DateExpected             *Time      `xmlrpc:"date_expected,omptempty"`
+	DateDeadline             *Time      `xmlrpc:"date_deadline,omptempty"`
+	DelayAlertDate           *Time      `xmlrpc:"delay_alert_date,omptempty"`
+	DescriptionPicking       *String    `xmlrpc:"description_picking,omptempty"`
+	DisplayAssignSerial      *Bool      `xmlrpc:"display_assign_serial,omptempty"`
+	DisplayClearSerial       *Bool      `xmlrpc:"display_clear_serial,omptempty"`
 	DisplayName              *String    `xmlrpc:"display_name,omptempty"`
+	ForecastAvailability     *Float     `xmlrpc:"forecast_availability,omptempty"`
+	ForecastExpectedDate     *Time      `xmlrpc:"forecast_expected_date,omptempty"`
+	FromImmediateTransfer    *Bool      `xmlrpc:"from_immediate_transfer,omptempty"`
 	GroupId                  *Many2One  `xmlrpc:"group_id,omptempty"`
-	HasMoveLines             *Bool      `xmlrpc:"has_move_lines,omptempty"`
 	HasTracking              *Selection `xmlrpc:"has_tracking,omptempty"`
 	Id                       *Int       `xmlrpc:"id,omptempty"`
-	InventoryId              *Many2One  `xmlrpc:"inventory_id,omptempty"`
 	IsInitialDemandEditable  *Bool      `xmlrpc:"is_initial_demand_editable,omptempty"`
+	IsInventory              *Bool      `xmlrpc:"is_inventory,omptempty"`
 	IsLocked                 *Bool      `xmlrpc:"is_locked,omptempty"`
 	IsQuantityDoneEditable   *Bool      `xmlrpc:"is_quantity_done_editable,omptempty"`
 	LocationDestId           *Many2One  `xmlrpc:"location_dest_id,omptempty"`
+	LocationDestUsage        *Selection `xmlrpc:"location_dest_usage,omptempty"`
 	LocationId               *Many2One  `xmlrpc:"location_id,omptempty"`
+	LocationUsage            *Selection `xmlrpc:"location_usage,omptempty"`
+	LotIds                   *Relation  `xmlrpc:"lot_ids,omptempty"`
 	MoveDestIds              *Relation  `xmlrpc:"move_dest_ids,omptempty"`
 	MoveLineIds              *Relation  `xmlrpc:"move_line_ids,omptempty"`
 	MoveLineNosuggestIds     *Relation  `xmlrpc:"move_line_nosuggest_ids,omptempty"`
+	MoveLinesCount           *Int       `xmlrpc:"move_lines_count,omptempty"`
 	MoveOrigIds              *Relation  `xmlrpc:"move_orig_ids,omptempty"`
 	Name                     *String    `xmlrpc:"name,omptempty"`
-	Note                     *String    `xmlrpc:"note,omptempty"`
-	OrderedQty               *Float     `xmlrpc:"ordered_qty,omptempty"`
+	NextSerial               *String    `xmlrpc:"next_serial,omptempty"`
+	NextSerialCount          *Int       `xmlrpc:"next_serial_count,omptempty"`
+	OrderpointId             *Many2One  `xmlrpc:"orderpoint_id,omptempty"`
 	Origin                   *String    `xmlrpc:"origin,omptempty"`
 	OriginReturnedMoveId     *Many2One  `xmlrpc:"origin_returned_move_id,omptempty"`
+	PackageLevelId           *Many2One  `xmlrpc:"package_level_id,omptempty"`
 	PartnerId                *Many2One  `xmlrpc:"partner_id,omptempty"`
 	PickingCode              *Selection `xmlrpc:"picking_code,omptempty"`
 	PickingId                *Many2One  `xmlrpc:"picking_id,omptempty"`
-	PickingPartnerId         *Many2One  `xmlrpc:"picking_partner_id,omptempty"`
+	PickingTypeEntirePacks   *Bool      `xmlrpc:"picking_type_entire_packs,omptempty"`
 	PickingTypeId            *Many2One  `xmlrpc:"picking_type_id,omptempty"`
 	PriceUnit                *Float     `xmlrpc:"price_unit,omptempty"`
 	Priority                 *Selection `xmlrpc:"priority,omptempty"`
 	ProcureMethod            *Selection `xmlrpc:"procure_method,omptempty"`
 	ProductId                *Many2One  `xmlrpc:"product_id,omptempty"`
-	ProductPackaging         *Many2One  `xmlrpc:"product_packaging,omptempty"`
+	ProductPackagingId       *Many2One  `xmlrpc:"product_packaging_id,omptempty"`
 	ProductQty               *Float     `xmlrpc:"product_qty,omptempty"`
 	ProductTmplId            *Many2One  `xmlrpc:"product_tmpl_id,omptempty"`
 	ProductType              *Selection `xmlrpc:"product_type,omptempty"`
 	ProductUom               *Many2One  `xmlrpc:"product_uom,omptempty"`
+	ProductUomCategoryId     *Many2One  `xmlrpc:"product_uom_category_id,omptempty"`
 	ProductUomQty            *Float     `xmlrpc:"product_uom_qty,omptempty"`
-	Propagate                *Bool      `xmlrpc:"propagate,omptempty"`
-	PurchaseLineId           *Many2One  `xmlrpc:"purchase_line_id,omptempty"`
-	PushRuleId               *Many2One  `xmlrpc:"push_rule_id,omptempty"`
+	PropagateCancel          *Bool      `xmlrpc:"propagate_cancel,omptempty"`
 	QuantityDone             *Float     `xmlrpc:"quantity_done,omptempty"`
 	Reference                *String    `xmlrpc:"reference,omptempty"`
-	RemainingQty             *Float     `xmlrpc:"remaining_qty,omptempty"`
-	RemainingValue           *Float     `xmlrpc:"remaining_value,omptempty"`
+	ReservationDate          *Time      `xmlrpc:"reservation_date,omptempty"`
 	ReservedAvailability     *Float     `xmlrpc:"reserved_availability,omptempty"`
 	RestrictPartnerId        *Many2One  `xmlrpc:"restrict_partner_id,omptempty"`
 	ReturnedMoveIds          *Relation  `xmlrpc:"returned_move_ids,omptempty"`
 	RouteIds                 *Relation  `xmlrpc:"route_ids,omptempty"`
 	RuleId                   *Many2One  `xmlrpc:"rule_id,omptempty"`
-	SaleLineId               *Many2One  `xmlrpc:"sale_line_id,omptempty"`
 	ScrapIds                 *Relation  `xmlrpc:"scrap_ids,omptempty"`
 	Scrapped                 *Bool      `xmlrpc:"scrapped,omptempty"`
 	Sequence                 *Int       `xmlrpc:"sequence,omptempty"`
@@ -72,9 +80,8 @@ type StockMove struct {
 	ShowOperations           *Bool      `xmlrpc:"show_operations,omptempty"`
 	ShowReservedAvailability *Bool      `xmlrpc:"show_reserved_availability,omptempty"`
 	State                    *Selection `xmlrpc:"state,omptempty"`
-	StringAvailabilityInfo   *String    `xmlrpc:"string_availability_info,omptempty"`
+	StockValuationLayerIds   *Relation  `xmlrpc:"stock_valuation_layer_ids,omptempty"`
 	ToRefund                 *Bool      `xmlrpc:"to_refund,omptempty"`
-	Value                    *Float     `xmlrpc:"value,omptempty"`
 	WarehouseId              *Many2One  `xmlrpc:"warehouse_id,omptempty"`
 	WriteDate                *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid                 *Many2One  `xmlrpc:"write_uid,omptempty"`

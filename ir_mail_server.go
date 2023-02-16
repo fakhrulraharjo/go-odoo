@@ -6,22 +6,33 @@ import (
 
 // IrMailServer represents ir.mail_server model.
 type IrMailServer struct {
-	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
-	Active         *Bool      `xmlrpc:"active,omptempty"`
-	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
-	Id             *Int       `xmlrpc:"id,omptempty"`
-	Name           *String    `xmlrpc:"name,omptempty"`
-	Sequence       *Int       `xmlrpc:"sequence,omptempty"`
-	SmtpDebug      *Bool      `xmlrpc:"smtp_debug,omptempty"`
-	SmtpEncryption *Selection `xmlrpc:"smtp_encryption,omptempty"`
-	SmtpHost       *String    `xmlrpc:"smtp_host,omptempty"`
-	SmtpPass       *String    `xmlrpc:"smtp_pass,omptempty"`
-	SmtpPort       *Int       `xmlrpc:"smtp_port,omptempty"`
-	SmtpUser       *String    `xmlrpc:"smtp_user,omptempty"`
-	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                       *Time      `xmlrpc:"__last_update,omptempty"`
+	Active                           *Bool      `xmlrpc:"active,omptempty"`
+	CreateDate                       *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                        *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName                      *String    `xmlrpc:"display_name,omptempty"`
+	FromFilter                       *String    `xmlrpc:"from_filter,omptempty"`
+	GoogleGmailAccessToken           *String    `xmlrpc:"google_gmail_access_token,omptempty"`
+	GoogleGmailAccessTokenExpiration *Int       `xmlrpc:"google_gmail_access_token_expiration,omptempty"`
+	GoogleGmailAuthorizationCode     *String    `xmlrpc:"google_gmail_authorization_code,omptempty"`
+	GoogleGmailRefreshToken          *String    `xmlrpc:"google_gmail_refresh_token,omptempty"`
+	GoogleGmailUri                   *String    `xmlrpc:"google_gmail_uri,omptempty"`
+	Id                               *Int       `xmlrpc:"id,omptempty"`
+	MailTemplateIds                  *Relation  `xmlrpc:"mail_template_ids,omptempty"`
+	Name                             *String    `xmlrpc:"name,omptempty"`
+	Sequence                         *Int       `xmlrpc:"sequence,omptempty"`
+	SmtpAuthentication               *Selection `xmlrpc:"smtp_authentication,omptempty"`
+	SmtpAuthenticationInfo           *String    `xmlrpc:"smtp_authentication_info,omptempty"`
+	SmtpDebug                        *Bool      `xmlrpc:"smtp_debug,omptempty"`
+	SmtpEncryption                   *Selection `xmlrpc:"smtp_encryption,omptempty"`
+	SmtpHost                         *String    `xmlrpc:"smtp_host,omptempty"`
+	SmtpPass                         *String    `xmlrpc:"smtp_pass,omptempty"`
+	SmtpPort                         *Int       `xmlrpc:"smtp_port,omptempty"`
+	SmtpSslCertificate               *String    `xmlrpc:"smtp_ssl_certificate,omptempty"`
+	SmtpSslPrivateKey                *String    `xmlrpc:"smtp_ssl_private_key,omptempty"`
+	SmtpUser                         *String    `xmlrpc:"smtp_user,omptempty"`
+	WriteDate                        *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                         *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // IrMailServers represents array of ir.mail_server model.

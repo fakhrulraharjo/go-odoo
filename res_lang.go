@@ -15,13 +15,16 @@ type ResLang struct {
 	DecimalPoint *String    `xmlrpc:"decimal_point,omptempty"`
 	Direction    *Selection `xmlrpc:"direction,omptempty"`
 	DisplayName  *String    `xmlrpc:"display_name,omptempty"`
+	FlagImage    *String    `xmlrpc:"flag_image,omptempty"`
+	FlagImageUrl *String    `xmlrpc:"flag_image_url,omptempty"`
 	Grouping     *String    `xmlrpc:"grouping,omptempty"`
 	Id           *Int       `xmlrpc:"id,omptempty"`
 	IsoCode      *String    `xmlrpc:"iso_code,omptempty"`
 	Name         *String    `xmlrpc:"name,omptempty"`
 	ThousandsSep *String    `xmlrpc:"thousands_sep,omptempty"`
 	TimeFormat   *String    `xmlrpc:"time_format,omptempty"`
-	Translatable *Bool      `xmlrpc:"translatable,omptempty"`
+	UrlCode      *String    `xmlrpc:"url_code,omptempty"`
+	WeekStart    *Selection `xmlrpc:"week_start,omptempty"`
 	WriteDate    *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid     *Many2One  `xmlrpc:"write_uid,omptempty"`
 }

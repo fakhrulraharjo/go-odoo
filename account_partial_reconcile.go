@@ -6,22 +6,25 @@ import (
 
 // AccountPartialReconcile represents account.partial.reconcile model.
 type AccountPartialReconcile struct {
-	LastUpdate        *Time     `xmlrpc:"__last_update,omptempty"`
-	Amount            *Float    `xmlrpc:"amount,omptempty"`
-	AmountCurrency    *Float    `xmlrpc:"amount_currency,omptempty"`
-	CompanyCurrencyId *Many2One `xmlrpc:"company_currency_id,omptempty"`
-	CompanyId         *Many2One `xmlrpc:"company_id,omptempty"`
-	CreateDate        *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid         *Many2One `xmlrpc:"create_uid,omptempty"`
-	CreditMoveId      *Many2One `xmlrpc:"credit_move_id,omptempty"`
-	CurrencyId        *Many2One `xmlrpc:"currency_id,omptempty"`
-	DebitMoveId       *Many2One `xmlrpc:"debit_move_id,omptempty"`
-	DisplayName       *String   `xmlrpc:"display_name,omptempty"`
-	FullReconcileId   *Many2One `xmlrpc:"full_reconcile_id,omptempty"`
-	Id                *Int      `xmlrpc:"id,omptempty"`
-	MaxDate           *Time     `xmlrpc:"max_date,omptempty"`
-	WriteDate         *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid          *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate           *Time     `xmlrpc:"__last_update,omptempty"`
+	Amount               *Float    `xmlrpc:"amount,omptempty"`
+	CompanyCurrencyId    *Many2One `xmlrpc:"company_currency_id,omptempty"`
+	CompanyId            *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate           *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid            *Many2One `xmlrpc:"create_uid,omptempty"`
+	CreditAmountCurrency *Float    `xmlrpc:"credit_amount_currency,omptempty"`
+	CreditCurrencyId     *Many2One `xmlrpc:"credit_currency_id,omptempty"`
+	CreditMoveId         *Many2One `xmlrpc:"credit_move_id,omptempty"`
+	DebitAmountCurrency  *Float    `xmlrpc:"debit_amount_currency,omptempty"`
+	DebitCurrencyId      *Many2One `xmlrpc:"debit_currency_id,omptempty"`
+	DebitMoveId          *Many2One `xmlrpc:"debit_move_id,omptempty"`
+	DisplayName          *String   `xmlrpc:"display_name,omptempty"`
+	ExchangeMoveId       *Many2One `xmlrpc:"exchange_move_id,omptempty"`
+	FullReconcileId      *Many2One `xmlrpc:"full_reconcile_id,omptempty"`
+	Id                   *Int      `xmlrpc:"id,omptempty"`
+	MaxDate              *Time     `xmlrpc:"max_date,omptempty"`
+	WriteDate            *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid             *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountPartialReconciles represents array of account.partial.reconcile model.

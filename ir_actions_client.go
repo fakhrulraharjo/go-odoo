@@ -6,25 +6,26 @@ import (
 
 // IrActionsClient represents ir.actions.client model.
 type IrActionsClient struct {
-	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
-	BindingModelId *Many2One  `xmlrpc:"binding_model_id,omptempty"`
-	BindingType    *Selection `xmlrpc:"binding_type,omptempty"`
-	Context        *String    `xmlrpc:"context,omptempty"`
-	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
-	Help           *String    `xmlrpc:"help,omptempty"`
-	Id             *Int       `xmlrpc:"id,omptempty"`
-	Name           *String    `xmlrpc:"name,omptempty"`
-	Params         *String    `xmlrpc:"params,omptempty"`
-	ParamsStore    *String    `xmlrpc:"params_store,omptempty"`
-	ResModel       *String    `xmlrpc:"res_model,omptempty"`
-	Tag            *String    `xmlrpc:"tag,omptempty"`
-	Target         *Selection `xmlrpc:"target,omptempty"`
-	Type           *String    `xmlrpc:"type,omptempty"`
-	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
-	XmlId          *String    `xmlrpc:"xml_id,omptempty"`
+	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
+	BindingModelId   *Many2One  `xmlrpc:"binding_model_id,omptempty"`
+	BindingType      *Selection `xmlrpc:"binding_type,omptempty"`
+	BindingViewTypes *String    `xmlrpc:"binding_view_types,omptempty"`
+	Context          *String    `xmlrpc:"context,omptempty"`
+	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
+	Help             *String    `xmlrpc:"help,omptempty"`
+	Id               *Int       `xmlrpc:"id,omptempty"`
+	Name             *String    `xmlrpc:"name,omptempty"`
+	Params           *String    `xmlrpc:"params,omptempty"`
+	ParamsStore      *String    `xmlrpc:"params_store,omptempty"`
+	ResModel         *String    `xmlrpc:"res_model,omptempty"`
+	Tag              *String    `xmlrpc:"tag,omptempty"`
+	Target           *Selection `xmlrpc:"target,omptempty"`
+	Type             *String    `xmlrpc:"type,omptempty"`
+	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
+	XmlId            *String    `xmlrpc:"xml_id,omptempty"`
 }
 
 // IrActionsClients represents array of ir.actions.client model.

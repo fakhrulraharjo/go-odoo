@@ -6,16 +6,18 @@ import (
 
 // BarcodeNomenclature represents barcode.nomenclature model.
 type BarcodeNomenclature struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	Name        *String    `xmlrpc:"name,omptempty"`
-	RuleIds     *Relation  `xmlrpc:"rule_ids,omptempty"`
-	UpcEanConv  *Selection `xmlrpc:"upc_ean_conv,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate        *Time      `xmlrpc:"__last_update,omptempty"`
+	CreateDate        *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid         *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName       *String    `xmlrpc:"display_name,omptempty"`
+	Gs1SeparatorFnc1  *String    `xmlrpc:"gs1_separator_fnc1,omptempty"`
+	Id                *Int       `xmlrpc:"id,omptempty"`
+	IsGs1Nomenclature *Bool      `xmlrpc:"is_gs1_nomenclature,omptempty"`
+	Name              *String    `xmlrpc:"name,omptempty"`
+	RuleIds           *Relation  `xmlrpc:"rule_ids,omptempty"`
+	UpcEanConv        *Selection `xmlrpc:"upc_ean_conv,omptempty"`
+	WriteDate         *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid          *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // BarcodeNomenclatures represents array of barcode.nomenclature model.

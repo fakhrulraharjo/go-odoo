@@ -11,13 +11,14 @@ type IrModelFields struct {
 	Column2              *String    `xmlrpc:"column2,omptempty"`
 	CompleteName         *String    `xmlrpc:"complete_name,omptempty"`
 	Compute              *String    `xmlrpc:"compute,omptempty"`
-	Copy                 *Bool      `xmlrpc:"copy,omptempty"`
+	Copied               *Bool      `xmlrpc:"copied,omptempty"`
 	CreateDate           *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid            *Many2One  `xmlrpc:"create_uid,omptempty"`
 	Depends              *String    `xmlrpc:"depends,omptempty"`
 	DisplayName          *String    `xmlrpc:"display_name,omptempty"`
 	Domain               *String    `xmlrpc:"domain,omptempty"`
 	FieldDescription     *String    `xmlrpc:"field_description,omptempty"`
+	GroupExpand          *Bool      `xmlrpc:"group_expand,omptempty"`
 	Groups               *Relation  `xmlrpc:"groups,omptempty"`
 	Help                 *String    `xmlrpc:"help,omptempty"`
 	Id                   *Int       `xmlrpc:"id,omptempty"`
@@ -29,17 +30,20 @@ type IrModelFields struct {
 	OnDelete             *Selection `xmlrpc:"on_delete,omptempty"`
 	Readonly             *Bool      `xmlrpc:"readonly,omptempty"`
 	Related              *String    `xmlrpc:"related,omptempty"`
+	RelatedFieldId       *Many2One  `xmlrpc:"related_field_id,omptempty"`
 	Relation             *String    `xmlrpc:"relation,omptempty"`
 	RelationField        *String    `xmlrpc:"relation_field,omptempty"`
+	RelationFieldId      *Many2One  `xmlrpc:"relation_field_id,omptempty"`
 	RelationTable        *String    `xmlrpc:"relation_table,omptempty"`
 	Required             *Bool      `xmlrpc:"required,omptempty"`
 	Selectable           *Bool      `xmlrpc:"selectable,omptempty"`
 	Selection            *String    `xmlrpc:"selection,omptempty"`
+	SelectionIds         *Relation  `xmlrpc:"selection_ids,omptempty"`
 	SerializationFieldId *Many2One  `xmlrpc:"serialization_field_id,omptempty"`
 	Size                 *Int       `xmlrpc:"size,omptempty"`
 	State                *Selection `xmlrpc:"state,omptempty"`
 	Store                *Bool      `xmlrpc:"store,omptempty"`
-	TrackVisibility      *Selection `xmlrpc:"track_visibility,omptempty"`
+	Tracking             *Int       `xmlrpc:"tracking,omptempty"`
 	Translate            *Bool      `xmlrpc:"translate,omptempty"`
 	Ttype                *Selection `xmlrpc:"ttype,omptempty"`
 	WriteDate            *Time      `xmlrpc:"write_date,omptempty"`

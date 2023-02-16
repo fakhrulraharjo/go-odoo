@@ -7,7 +7,6 @@ import (
 // PaymentIcon represents payment.icon model.
 type PaymentIcon struct {
 	LastUpdate       *Time     `xmlrpc:"__last_update,omptempty"`
-	AcquirerIds      *Relation `xmlrpc:"acquirer_ids,omptempty"`
 	CreateDate       *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid        *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName      *String   `xmlrpc:"display_name,omptempty"`
@@ -15,6 +14,8 @@ type PaymentIcon struct {
 	Image            *String   `xmlrpc:"image,omptempty"`
 	ImagePaymentForm *String   `xmlrpc:"image_payment_form,omptempty"`
 	Name             *String   `xmlrpc:"name,omptempty"`
+	ProviderIds      *Relation `xmlrpc:"provider_ids,omptempty"`
+	Sequence         *Int      `xmlrpc:"sequence,omptempty"`
 	WriteDate        *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid         *Many2One `xmlrpc:"write_uid,omptempty"`
 }

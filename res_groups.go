@@ -16,7 +16,6 @@ type ResGroups struct {
 	FullName        *String   `xmlrpc:"full_name,omptempty"`
 	Id              *Int      `xmlrpc:"id,omptempty"`
 	ImpliedIds      *Relation `xmlrpc:"implied_ids,omptempty"`
-	IsPortal        *Bool     `xmlrpc:"is_portal,omptempty"`
 	MenuAccess      *Relation `xmlrpc:"menu_access,omptempty"`
 	ModelAccess     *Relation `xmlrpc:"model_access,omptempty"`
 	Name            *String   `xmlrpc:"name,omptempty"`

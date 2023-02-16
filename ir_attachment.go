@@ -13,19 +13,23 @@ type IrAttachment struct {
 	CreateDate   *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid    *Many2One  `xmlrpc:"create_uid,omptempty"`
 	Datas        *String    `xmlrpc:"datas,omptempty"`
-	DatasFname   *String    `xmlrpc:"datas_fname,omptempty"`
 	DbDatas      *String    `xmlrpc:"db_datas,omptempty"`
 	Description  *String    `xmlrpc:"description,omptempty"`
 	DisplayName  *String    `xmlrpc:"display_name,omptempty"`
 	FileSize     *Int       `xmlrpc:"file_size,omptempty"`
 	Id           *Int       `xmlrpc:"id,omptempty"`
+	ImageHeight  *Int       `xmlrpc:"image_height,omptempty"`
+	ImageSrc     *String    `xmlrpc:"image_src,omptempty"`
+	ImageWidth   *Int       `xmlrpc:"image_width,omptempty"`
 	IndexContent *String    `xmlrpc:"index_content,omptempty"`
 	LocalUrl     *String    `xmlrpc:"local_url,omptempty"`
 	Mimetype     *String    `xmlrpc:"mimetype,omptempty"`
 	Name         *String    `xmlrpc:"name,omptempty"`
+	OriginalId   *Many2One  `xmlrpc:"original_id,omptempty"`
 	Public       *Bool      `xmlrpc:"public,omptempty"`
+	Raw          *String    `xmlrpc:"raw,omptempty"`
 	ResField     *String    `xmlrpc:"res_field,omptempty"`
-	ResId        *Int       `xmlrpc:"res_id,omptempty"`
+	ResId        *Many2One  `xmlrpc:"res_id,omptempty"`
 	ResModel     *String    `xmlrpc:"res_model,omptempty"`
 	ResName      *String    `xmlrpc:"res_name,omptempty"`
 	StoreFname   *String    `xmlrpc:"store_fname,omptempty"`

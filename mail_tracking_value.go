@@ -9,9 +9,11 @@ type MailTrackingValue struct {
 	LastUpdate       *Time     `xmlrpc:"__last_update,omptempty"`
 	CreateDate       *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid        *Many2One `xmlrpc:"create_uid,omptempty"`
+	CurrencyId       *Many2One `xmlrpc:"currency_id,omptempty"`
 	DisplayName      *String   `xmlrpc:"display_name,omptempty"`
-	Field            *String   `xmlrpc:"field,omptempty"`
+	Field            *Many2One `xmlrpc:"field,omptempty"`
 	FieldDesc        *String   `xmlrpc:"field_desc,omptempty"`
+	FieldGroups      *String   `xmlrpc:"field_groups,omptempty"`
 	FieldType        *String   `xmlrpc:"field_type,omptempty"`
 	Id               *Int      `xmlrpc:"id,omptempty"`
 	MailMessageId    *Many2One `xmlrpc:"mail_message_id,omptempty"`
@@ -27,6 +29,7 @@ type MailTrackingValue struct {
 	OldValueInteger  *Int      `xmlrpc:"old_value_integer,omptempty"`
 	OldValueMonetary *Float    `xmlrpc:"old_value_monetary,omptempty"`
 	OldValueText     *String   `xmlrpc:"old_value_text,omptempty"`
+	TrackingSequence *Int      `xmlrpc:"tracking_sequence,omptempty"`
 	WriteDate        *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid         *Many2One `xmlrpc:"write_uid,omptempty"`
 }

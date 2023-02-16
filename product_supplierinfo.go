@@ -17,7 +17,7 @@ type ProductSupplierinfo struct {
 	DisplayName         *String   `xmlrpc:"display_name,omptempty"`
 	Id                  *Int      `xmlrpc:"id,omptempty"`
 	MinQty              *Float    `xmlrpc:"min_qty,omptempty"`
-	Name                *Many2One `xmlrpc:"name,omptempty"`
+	PartnerId           *Many2One `xmlrpc:"partner_id,omptempty"`
 	Price               *Float    `xmlrpc:"price,omptempty"`
 	ProductCode         *String   `xmlrpc:"product_code,omptempty"`
 	ProductId           *Many2One `xmlrpc:"product_id,omptempty"`

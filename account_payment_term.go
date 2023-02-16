@@ -6,19 +6,24 @@ import (
 
 // AccountPaymentTerm represents account.payment.term model.
 type AccountPaymentTerm struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	Active      *Bool     `xmlrpc:"active,omptempty"`
-	CompanyId   *Many2One `xmlrpc:"company_id,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	LineIds     *Relation `xmlrpc:"line_ids,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	Note        *String   `xmlrpc:"note,omptempty"`
-	Sequence    *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate       *Time     `xmlrpc:"__last_update,omptempty"`
+	Active           *Bool     `xmlrpc:"active,omptempty"`
+	CompanyId        *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate       *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName      *String   `xmlrpc:"display_name,omptempty"`
+	DisplayOnInvoice *Bool     `xmlrpc:"display_on_invoice,omptempty"`
+	ExampleAmount    *Float    `xmlrpc:"example_amount,omptempty"`
+	ExampleDate      *Time     `xmlrpc:"example_date,omptempty"`
+	ExampleInvalid   *Bool     `xmlrpc:"example_invalid,omptempty"`
+	ExamplePreview   *String   `xmlrpc:"example_preview,omptempty"`
+	Id               *Int      `xmlrpc:"id,omptempty"`
+	LineIds          *Relation `xmlrpc:"line_ids,omptempty"`
+	Name             *String   `xmlrpc:"name,omptempty"`
+	Note             *String   `xmlrpc:"note,omptempty"`
+	Sequence         *Int      `xmlrpc:"sequence,omptempty"`
+	WriteDate        *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountPaymentTerms represents array of account.payment.term model.

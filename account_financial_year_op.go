@@ -6,19 +6,18 @@ import (
 
 // AccountFinancialYearOp represents account.financial.year.op model.
 type AccountFinancialYearOp struct {
-	LastUpdate             *Time      `xmlrpc:"__last_update,omptempty"`
-	AccountSetupFyDataDone *Bool      `xmlrpc:"account_setup_fy_data_done,omptempty"`
-	CompanyId              *Many2One  `xmlrpc:"company_id,omptempty"`
-	CreateDate             *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid              *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName            *String    `xmlrpc:"display_name,omptempty"`
-	FiscalyearLastDay      *Int       `xmlrpc:"fiscalyear_last_day,omptempty"`
-	FiscalyearLastMonth    *Selection `xmlrpc:"fiscalyear_last_month,omptempty"`
-	Id                     *Int       `xmlrpc:"id,omptempty"`
-	OpeningDate            *Time      `xmlrpc:"opening_date,omptempty"`
-	OpeningMovePosted      *Bool      `xmlrpc:"opening_move_posted,omptempty"`
-	WriteDate              *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid               *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
+	CompanyId           *Many2One  `xmlrpc:"company_id,omptempty"`
+	CreateDate          *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid           *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
+	FiscalyearLastDay   *Int       `xmlrpc:"fiscalyear_last_day,omptempty"`
+	FiscalyearLastMonth *Selection `xmlrpc:"fiscalyear_last_month,omptempty"`
+	Id                  *Int       `xmlrpc:"id,omptempty"`
+	OpeningDate         *Time      `xmlrpc:"opening_date,omptempty"`
+	OpeningMovePosted   *Bool      `xmlrpc:"opening_move_posted,omptempty"`
+	WriteDate           *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid            *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountFinancialYearOps represents array of account.financial.year.op model.

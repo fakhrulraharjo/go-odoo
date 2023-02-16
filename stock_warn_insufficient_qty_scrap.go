@@ -6,17 +6,19 @@ import (
 
 // StockWarnInsufficientQtyScrap represents stock.warn.insufficient.qty.scrap model.
 type StockWarnInsufficientQtyScrap struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	LocationId  *Many2One `xmlrpc:"location_id,omptempty"`
-	ProductId   *Many2One `xmlrpc:"product_id,omptempty"`
-	QuantIds    *Relation `xmlrpc:"quant_ids,omptempty"`
-	ScrapId     *Many2One `xmlrpc:"scrap_id,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate     *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate     *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid      *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName    *String   `xmlrpc:"display_name,omptempty"`
+	Id             *Int      `xmlrpc:"id,omptempty"`
+	LocationId     *Many2One `xmlrpc:"location_id,omptempty"`
+	ProductId      *Many2One `xmlrpc:"product_id,omptempty"`
+	ProductUomName *String   `xmlrpc:"product_uom_name,omptempty"`
+	QuantIds       *Relation `xmlrpc:"quant_ids,omptempty"`
+	Quantity       *Float    `xmlrpc:"quantity,omptempty"`
+	ScrapId        *Many2One `xmlrpc:"scrap_id,omptempty"`
+	WriteDate      *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid       *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // StockWarnInsufficientQtyScraps represents array of stock.warn.insufficient.qty.scrap model.

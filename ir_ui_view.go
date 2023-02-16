@@ -12,8 +12,11 @@ type IrUiView struct {
 	ArchBase           *String    `xmlrpc:"arch_base,omptempty"`
 	ArchDb             *String    `xmlrpc:"arch_db,omptempty"`
 	ArchFs             *String    `xmlrpc:"arch_fs,omptempty"`
+	ArchPrev           *String    `xmlrpc:"arch_prev,omptempty"`
+	ArchUpdated        *Bool      `xmlrpc:"arch_updated,omptempty"`
 	CreateDate         *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid          *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CustomizeShow      *Bool      `xmlrpc:"customize_show,omptempty"`
 	DisplayName        *String    `xmlrpc:"display_name,omptempty"`
 	FieldParent        *String    `xmlrpc:"field_parent,omptempty"`
 	GroupsId           *Relation  `xmlrpc:"groups_id,omptempty"`
@@ -24,7 +27,6 @@ type IrUiView struct {
 	Mode               *Selection `xmlrpc:"mode,omptempty"`
 	Model              *String    `xmlrpc:"model,omptempty"`
 	ModelDataId        *Many2One  `xmlrpc:"model_data_id,omptempty"`
-	ModelIds           *Relation  `xmlrpc:"model_ids,omptempty"`
 	Name               *String    `xmlrpc:"name,omptempty"`
 	Priority           *Int       `xmlrpc:"priority,omptempty"`
 	Type               *Selection `xmlrpc:"type,omptempty"`

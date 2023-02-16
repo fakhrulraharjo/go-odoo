@@ -10,11 +10,13 @@ type AccountAccountTag struct {
 	Active        *Bool      `xmlrpc:"active,omptempty"`
 	Applicability *Selection `xmlrpc:"applicability,omptempty"`
 	Color         *Int       `xmlrpc:"color,omptempty"`
+	CountryId     *Many2One  `xmlrpc:"country_id,omptempty"`
 	CreateDate    *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid     *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
 	Id            *Int       `xmlrpc:"id,omptempty"`
 	Name          *String    `xmlrpc:"name,omptempty"`
+	TaxNegate     *Bool      `xmlrpc:"tax_negate,omptempty"`
 	WriteDate     *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid      *Many2One  `xmlrpc:"write_uid,omptempty"`
 }

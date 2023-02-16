@@ -16,8 +16,7 @@ type ResPartnerCategory struct {
 	Id          *Int      `xmlrpc:"id,omptempty"`
 	Name        *String   `xmlrpc:"name,omptempty"`
 	ParentId    *Many2One `xmlrpc:"parent_id,omptempty"`
-	ParentLeft  *Int      `xmlrpc:"parent_left,omptempty"`
-	ParentRight *Int      `xmlrpc:"parent_right,omptempty"`
+	ParentPath  *String   `xmlrpc:"parent_path,omptempty"`
 	PartnerIds  *Relation `xmlrpc:"partner_ids,omptempty"`
 	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`

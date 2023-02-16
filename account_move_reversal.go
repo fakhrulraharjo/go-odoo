@@ -6,15 +6,26 @@ import (
 
 // AccountMoveReversal represents account.move.reversal model.
 type AccountMoveReversal struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	Date        *Time     `xmlrpc:"date,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	JournalId   *Many2One `xmlrpc:"journal_id,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
+	AvailableJournalIds *Relation  `xmlrpc:"available_journal_ids,omptempty"`
+	CompanyId           *Many2One  `xmlrpc:"company_id,omptempty"`
+	CountryCode         *String    `xmlrpc:"country_code,omptempty"`
+	CreateDate          *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid           *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CurrencyId          *Many2One  `xmlrpc:"currency_id,omptempty"`
+	Date                *Time      `xmlrpc:"date,omptempty"`
+	DateMode            *Selection `xmlrpc:"date_mode,omptempty"`
+	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
+	Id                  *Int       `xmlrpc:"id,omptempty"`
+	JournalId           *Many2One  `xmlrpc:"journal_id,omptempty"`
+	MoveIds             *Relation  `xmlrpc:"move_ids,omptempty"`
+	MoveType            *String    `xmlrpc:"move_type,omptempty"`
+	NewMoveIds          *Relation  `xmlrpc:"new_move_ids,omptempty"`
+	Reason              *String    `xmlrpc:"reason,omptempty"`
+	RefundMethod        *Selection `xmlrpc:"refund_method,omptempty"`
+	Residual            *Float     `xmlrpc:"residual,omptempty"`
+	WriteDate           *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid            *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountMoveReversals represents array of account.move.reversal model.

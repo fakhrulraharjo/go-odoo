@@ -7,6 +7,7 @@ import (
 // StockReturnPicking represents stock.return.picking model.
 type StockReturnPicking struct {
 	LastUpdate         *Time     `xmlrpc:"__last_update,omptempty"`
+	CompanyId          *Many2One `xmlrpc:"company_id,omptempty"`
 	CreateDate         *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid          *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName        *String   `xmlrpc:"display_name,omptempty"`

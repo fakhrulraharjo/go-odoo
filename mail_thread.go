@@ -6,19 +6,18 @@ import (
 
 // MailThread represents mail.thread model.
 type MailThread struct {
-	LastUpdate               *Time     `xmlrpc:"__last_update,omptempty"`
-	DisplayName              *String   `xmlrpc:"display_name,omptempty"`
-	Id                       *Int      `xmlrpc:"id,omptempty"`
-	MessageChannelIds        *Relation `xmlrpc:"message_channel_ids,omptempty"`
+	HasMessage               *Bool     `xmlrpc:"has_message,omptempty"`
+	MessageAttachmentCount   *Int      `xmlrpc:"message_attachment_count,omptempty"`
 	MessageFollowerIds       *Relation `xmlrpc:"message_follower_ids,omptempty"`
+	MessageHasError          *Bool     `xmlrpc:"message_has_error,omptempty"`
+	MessageHasErrorCounter   *Int      `xmlrpc:"message_has_error_counter,omptempty"`
+	MessageHasSmsError       *Bool     `xmlrpc:"message_has_sms_error,omptempty"`
 	MessageIds               *Relation `xmlrpc:"message_ids,omptempty"`
 	MessageIsFollower        *Bool     `xmlrpc:"message_is_follower,omptempty"`
-	MessageLastPost          *Time     `xmlrpc:"message_last_post,omptempty"`
+	MessageMainAttachmentId  *Many2One `xmlrpc:"message_main_attachment_id,omptempty"`
 	MessageNeedaction        *Bool     `xmlrpc:"message_needaction,omptempty"`
 	MessageNeedactionCounter *Int      `xmlrpc:"message_needaction_counter,omptempty"`
 	MessagePartnerIds        *Relation `xmlrpc:"message_partner_ids,omptempty"`
-	MessageUnread            *Bool     `xmlrpc:"message_unread,omptempty"`
-	MessageUnreadCounter     *Int      `xmlrpc:"message_unread_counter,omptempty"`
 	WebsiteMessageIds        *Relation `xmlrpc:"website_message_ids,omptempty"`
 }
 

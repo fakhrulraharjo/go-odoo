@@ -6,24 +6,36 @@ import (
 
 // AccountAccountTemplate represents account.account.template model.
 type AccountAccountTemplate struct {
-	LastUpdate      *Time     `xmlrpc:"__last_update,omptempty"`
-	ChartTemplateId *Many2One `xmlrpc:"chart_template_id,omptempty"`
-	Code            *String   `xmlrpc:"code,omptempty"`
-	CreateDate      *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid       *Many2One `xmlrpc:"create_uid,omptempty"`
-	CurrencyId      *Many2One `xmlrpc:"currency_id,omptempty"`
-	DisplayName     *String   `xmlrpc:"display_name,omptempty"`
-	GroupId         *Many2One `xmlrpc:"group_id,omptempty"`
-	Id              *Int      `xmlrpc:"id,omptempty"`
-	Name            *String   `xmlrpc:"name,omptempty"`
-	Nocreate        *Bool     `xmlrpc:"nocreate,omptempty"`
-	Note            *String   `xmlrpc:"note,omptempty"`
-	Reconcile       *Bool     `xmlrpc:"reconcile,omptempty"`
-	TagIds          *Relation `xmlrpc:"tag_ids,omptempty"`
-	TaxIds          *Relation `xmlrpc:"tax_ids,omptempty"`
-	UserTypeId      *Many2One `xmlrpc:"user_type_id,omptempty"`
-	WriteDate       *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid        *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate               *Time      `xmlrpc:"__last_update,omptempty"`
+	AccountType              *Selection `xmlrpc:"account_type,omptempty"`
+	ChartTemplateId          *Many2One  `xmlrpc:"chart_template_id,omptempty"`
+	Code                     *String    `xmlrpc:"code,omptempty"`
+	CreateDate               *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CurrencyId               *Many2One  `xmlrpc:"currency_id,omptempty"`
+	DisplayName              *String    `xmlrpc:"display_name,omptempty"`
+	HasMessage               *Bool      `xmlrpc:"has_message,omptempty"`
+	Id                       *Int       `xmlrpc:"id,omptempty"`
+	MessageAttachmentCount   *Int       `xmlrpc:"message_attachment_count,omptempty"`
+	MessageFollowerIds       *Relation  `xmlrpc:"message_follower_ids,omptempty"`
+	MessageHasError          *Bool      `xmlrpc:"message_has_error,omptempty"`
+	MessageHasErrorCounter   *Int       `xmlrpc:"message_has_error_counter,omptempty"`
+	MessageHasSmsError       *Bool      `xmlrpc:"message_has_sms_error,omptempty"`
+	MessageIds               *Relation  `xmlrpc:"message_ids,omptempty"`
+	MessageIsFollower        *Bool      `xmlrpc:"message_is_follower,omptempty"`
+	MessageMainAttachmentId  *Many2One  `xmlrpc:"message_main_attachment_id,omptempty"`
+	MessageNeedaction        *Bool      `xmlrpc:"message_needaction,omptempty"`
+	MessageNeedactionCounter *Int       `xmlrpc:"message_needaction_counter,omptempty"`
+	MessagePartnerIds        *Relation  `xmlrpc:"message_partner_ids,omptempty"`
+	Name                     *String    `xmlrpc:"name,omptempty"`
+	Nocreate                 *Bool      `xmlrpc:"nocreate,omptempty"`
+	Note                     *String    `xmlrpc:"note,omptempty"`
+	Reconcile                *Bool      `xmlrpc:"reconcile,omptempty"`
+	TagIds                   *Relation  `xmlrpc:"tag_ids,omptempty"`
+	TaxIds                   *Relation  `xmlrpc:"tax_ids,omptempty"`
+	WebsiteMessageIds        *Relation  `xmlrpc:"website_message_ids,omptempty"`
+	WriteDate                *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                 *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountAccountTemplates represents array of account.account.template model.

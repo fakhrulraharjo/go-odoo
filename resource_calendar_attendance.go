@@ -6,20 +6,26 @@ import (
 
 // ResourceCalendarAttendance represents resource.calendar.attendance model.
 type ResourceCalendarAttendance struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	CalendarId  *Many2One  `xmlrpc:"calendar_id,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DateFrom    *Time      `xmlrpc:"date_from,omptempty"`
-	DateTo      *Time      `xmlrpc:"date_to,omptempty"`
-	Dayofweek   *Selection `xmlrpc:"dayofweek,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	HourFrom    *Float     `xmlrpc:"hour_from,omptempty"`
-	HourTo      *Float     `xmlrpc:"hour_to,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	Name        *String    `xmlrpc:"name,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
+	CalendarId       *Many2One  `xmlrpc:"calendar_id,omptempty"`
+	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DateFrom         *Time      `xmlrpc:"date_from,omptempty"`
+	DateTo           *Time      `xmlrpc:"date_to,omptempty"`
+	DayPeriod        *Selection `xmlrpc:"day_period,omptempty"`
+	Dayofweek        *Selection `xmlrpc:"dayofweek,omptempty"`
+	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
+	DisplayType      *Selection `xmlrpc:"display_type,omptempty"`
+	HourFrom         *Float     `xmlrpc:"hour_from,omptempty"`
+	HourTo           *Float     `xmlrpc:"hour_to,omptempty"`
+	Id               *Int       `xmlrpc:"id,omptempty"`
+	Name             *String    `xmlrpc:"name,omptempty"`
+	ResourceId       *Many2One  `xmlrpc:"resource_id,omptempty"`
+	Sequence         *Int       `xmlrpc:"sequence,omptempty"`
+	TwoWeeksCalendar *Bool      `xmlrpc:"two_weeks_calendar,omptempty"`
+	WeekType         *Selection `xmlrpc:"week_type,omptempty"`
+	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ResourceCalendarAttendances represents array of resource.calendar.attendance model.

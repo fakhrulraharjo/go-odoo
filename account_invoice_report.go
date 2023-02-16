@@ -6,39 +6,31 @@ import (
 
 // AccountInvoiceReport represents account.invoice.report model.
 type AccountInvoiceReport struct {
-	LastUpdate               *Time      `xmlrpc:"__last_update,omptempty"`
-	AccountAnalyticId        *Many2One  `xmlrpc:"account_analytic_id,omptempty"`
-	AccountId                *Many2One  `xmlrpc:"account_id,omptempty"`
-	AccountLineId            *Many2One  `xmlrpc:"account_line_id,omptempty"`
-	CategId                  *Many2One  `xmlrpc:"categ_id,omptempty"`
-	CommercialPartnerId      *Many2One  `xmlrpc:"commercial_partner_id,omptempty"`
-	CompanyId                *Many2One  `xmlrpc:"company_id,omptempty"`
-	CountryId                *Many2One  `xmlrpc:"country_id,omptempty"`
-	CurrencyId               *Many2One  `xmlrpc:"currency_id,omptempty"`
-	CurrencyRate             *Float     `xmlrpc:"currency_rate,omptempty"`
-	Date                     *Time      `xmlrpc:"date,omptempty"`
-	DateDue                  *Time      `xmlrpc:"date_due,omptempty"`
-	DisplayName              *String    `xmlrpc:"display_name,omptempty"`
-	FiscalPositionId         *Many2One  `xmlrpc:"fiscal_position_id,omptempty"`
-	Id                       *Int       `xmlrpc:"id,omptempty"`
-	JournalId                *Many2One  `xmlrpc:"journal_id,omptempty"`
-	Nbr                      *Int       `xmlrpc:"nbr,omptempty"`
-	PartnerBankId            *Many2One  `xmlrpc:"partner_bank_id,omptempty"`
-	PartnerId                *Many2One  `xmlrpc:"partner_id,omptempty"`
-	PaymentTermId            *Many2One  `xmlrpc:"payment_term_id,omptempty"`
-	PriceAverage             *Float     `xmlrpc:"price_average,omptempty"`
-	PriceTotal               *Float     `xmlrpc:"price_total,omptempty"`
-	ProductId                *Many2One  `xmlrpc:"product_id,omptempty"`
-	ProductQty               *Float     `xmlrpc:"product_qty,omptempty"`
-	Residual                 *Float     `xmlrpc:"residual,omptempty"`
-	State                    *Selection `xmlrpc:"state,omptempty"`
-	TeamId                   *Many2One  `xmlrpc:"team_id,omptempty"`
-	Type                     *Selection `xmlrpc:"type,omptempty"`
-	UomName                  *String    `xmlrpc:"uom_name,omptempty"`
-	UserCurrencyPriceAverage *Float     `xmlrpc:"user_currency_price_average,omptempty"`
-	UserCurrencyPriceTotal   *Float     `xmlrpc:"user_currency_price_total,omptempty"`
-	UserCurrencyResidual     *Float     `xmlrpc:"user_currency_residual,omptempty"`
-	UserId                   *Many2One  `xmlrpc:"user_id,omptempty"`
+	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
+	AccountId           *Many2One  `xmlrpc:"account_id,omptempty"`
+	CommercialPartnerId *Many2One  `xmlrpc:"commercial_partner_id,omptempty"`
+	CompanyCurrencyId   *Many2One  `xmlrpc:"company_currency_id,omptempty"`
+	CompanyId           *Many2One  `xmlrpc:"company_id,omptempty"`
+	CountryId           *Many2One  `xmlrpc:"country_id,omptempty"`
+	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
+	FiscalPositionId    *Many2One  `xmlrpc:"fiscal_position_id,omptempty"`
+	Id                  *Int       `xmlrpc:"id,omptempty"`
+	InvoiceDate         *Time      `xmlrpc:"invoice_date,omptempty"`
+	InvoiceDateDue      *Time      `xmlrpc:"invoice_date_due,omptempty"`
+	InvoiceUserId       *Many2One  `xmlrpc:"invoice_user_id,omptempty"`
+	JournalId           *Many2One  `xmlrpc:"journal_id,omptempty"`
+	MoveId              *Many2One  `xmlrpc:"move_id,omptempty"`
+	MoveType            *Selection `xmlrpc:"move_type,omptempty"`
+	PartnerId           *Many2One  `xmlrpc:"partner_id,omptempty"`
+	PaymentState        *Selection `xmlrpc:"payment_state,omptempty"`
+	PriceAverage        *Float     `xmlrpc:"price_average,omptempty"`
+	PriceSubtotal       *Float     `xmlrpc:"price_subtotal,omptempty"`
+	PriceTotal          *Float     `xmlrpc:"price_total,omptempty"`
+	ProductCategId      *Many2One  `xmlrpc:"product_categ_id,omptempty"`
+	ProductId           *Many2One  `xmlrpc:"product_id,omptempty"`
+	ProductUomId        *Many2One  `xmlrpc:"product_uom_id,omptempty"`
+	Quantity            *Float     `xmlrpc:"quantity,omptempty"`
+	State               *Selection `xmlrpc:"state,omptempty"`
 }
 
 // AccountInvoiceReports represents array of account.invoice.report model.

@@ -6,18 +6,22 @@ import (
 
 // ProductPackaging represents product.packaging model.
 type ProductPackaging struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	Barcode     *String   `xmlrpc:"barcode,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	ProductId   *Many2One `xmlrpc:"product_id,omptempty"`
-	Qty         *Float    `xmlrpc:"qty,omptempty"`
-	Sequence    *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate    *Time     `xmlrpc:"__last_update,omptempty"`
+	Barcode       *String   `xmlrpc:"barcode,omptempty"`
+	CompanyId     *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate    *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid     *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName   *String   `xmlrpc:"display_name,omptempty"`
+	Id            *Int      `xmlrpc:"id,omptempty"`
+	Name          *String   `xmlrpc:"name,omptempty"`
+	PackageTypeId *Many2One `xmlrpc:"package_type_id,omptempty"`
+	ProductId     *Many2One `xmlrpc:"product_id,omptempty"`
+	ProductUomId  *Many2One `xmlrpc:"product_uom_id,omptempty"`
+	Qty           *Float    `xmlrpc:"qty,omptempty"`
+	RouteIds      *Relation `xmlrpc:"route_ids,omptempty"`
+	Sequence      *Int      `xmlrpc:"sequence,omptempty"`
+	WriteDate     *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid      *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProductPackagings represents array of product.packaging model.

@@ -6,27 +6,30 @@ import (
 
 // ReportPaperformat represents report.paperformat model.
 type ReportPaperformat struct {
-	LastUpdate    *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate    *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid     *Many2One  `xmlrpc:"create_uid,omptempty"`
-	Default       *Bool      `xmlrpc:"default,omptempty"`
-	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
-	Dpi           *Int       `xmlrpc:"dpi,omptempty"`
-	Format        *Selection `xmlrpc:"format,omptempty"`
-	HeaderLine    *Bool      `xmlrpc:"header_line,omptempty"`
-	HeaderSpacing *Int       `xmlrpc:"header_spacing,omptempty"`
-	Id            *Int       `xmlrpc:"id,omptempty"`
-	MarginBottom  *Float     `xmlrpc:"margin_bottom,omptempty"`
-	MarginLeft    *Float     `xmlrpc:"margin_left,omptempty"`
-	MarginRight   *Float     `xmlrpc:"margin_right,omptempty"`
-	MarginTop     *Float     `xmlrpc:"margin_top,omptempty"`
-	Name          *String    `xmlrpc:"name,omptempty"`
-	Orientation   *Selection `xmlrpc:"orientation,omptempty"`
-	PageHeight    *Int       `xmlrpc:"page_height,omptempty"`
-	PageWidth     *Int       `xmlrpc:"page_width,omptempty"`
-	ReportIds     *Relation  `xmlrpc:"report_ids,omptempty"`
-	WriteDate     *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid      *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
+	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
+	Default          *Bool      `xmlrpc:"default,omptempty"`
+	DisableShrinking *Bool      `xmlrpc:"disable_shrinking,omptempty"`
+	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
+	Dpi              *Int       `xmlrpc:"dpi,omptempty"`
+	Format           *Selection `xmlrpc:"format,omptempty"`
+	HeaderLine       *Bool      `xmlrpc:"header_line,omptempty"`
+	HeaderSpacing    *Int       `xmlrpc:"header_spacing,omptempty"`
+	Id               *Int       `xmlrpc:"id,omptempty"`
+	MarginBottom     *Float     `xmlrpc:"margin_bottom,omptempty"`
+	MarginLeft       *Float     `xmlrpc:"margin_left,omptempty"`
+	MarginRight      *Float     `xmlrpc:"margin_right,omptempty"`
+	MarginTop        *Float     `xmlrpc:"margin_top,omptempty"`
+	Name             *String    `xmlrpc:"name,omptempty"`
+	Orientation      *Selection `xmlrpc:"orientation,omptempty"`
+	PageHeight       *Int       `xmlrpc:"page_height,omptempty"`
+	PageWidth        *Int       `xmlrpc:"page_width,omptempty"`
+	PrintPageHeight  *Float     `xmlrpc:"print_page_height,omptempty"`
+	PrintPageWidth   *Float     `xmlrpc:"print_page_width,omptempty"`
+	ReportIds        *Relation  `xmlrpc:"report_ids,omptempty"`
+	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ReportPaperformats represents array of report.paperformat model.

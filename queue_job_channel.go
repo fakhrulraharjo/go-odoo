@@ -6,17 +6,18 @@ import (
 
 // QueueJobChannel represents queue.job.channel model.
 type QueueJobChannel struct {
-	LastUpdate     *Time     `xmlrpc:"__last_update,omptempty"`
-	CompleteName   *String   `xmlrpc:"complete_name,omptempty"`
-	CreateDate     *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String   `xmlrpc:"display_name,omptempty"`
-	Id             *Int      `xmlrpc:"id,omptempty"`
-	JobFunctionIds *Relation `xmlrpc:"job_function_ids,omptempty"`
-	Name           *String   `xmlrpc:"name,omptempty"`
-	ParentId       *Many2One `xmlrpc:"parent_id,omptempty"`
-	WriteDate      *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate      *Time     `xmlrpc:"__last_update,omptempty"`
+	CompleteName    *String   `xmlrpc:"complete_name,omptempty"`
+	CreateDate      *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid       *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName     *String   `xmlrpc:"display_name,omptempty"`
+	Id              *Int      `xmlrpc:"id,omptempty"`
+	JobFunctionIds  *Relation `xmlrpc:"job_function_ids,omptempty"`
+	Name            *String   `xmlrpc:"name,omptempty"`
+	ParentId        *Many2One `xmlrpc:"parent_id,omptempty"`
+	RemovalInterval *Int      `xmlrpc:"removal_interval,omptempty"`
+	WriteDate       *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid        *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // QueueJobChannels represents array of queue.job.channel model.

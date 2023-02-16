@@ -6,23 +6,7 @@ import (
 
 // MailAliasMixin represents mail.alias.mixin model.
 type MailAliasMixin struct {
-	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
-	AliasContact        *Selection `xmlrpc:"alias_contact,omptempty"`
-	AliasDefaults       *String    `xmlrpc:"alias_defaults,omptempty"`
-	AliasDomain         *String    `xmlrpc:"alias_domain,omptempty"`
-	AliasForceThreadId  *Int       `xmlrpc:"alias_force_thread_id,omptempty"`
-	AliasId             *Many2One  `xmlrpc:"alias_id,omptempty"`
-	AliasModelId        *Many2One  `xmlrpc:"alias_model_id,omptempty"`
-	AliasName           *String    `xmlrpc:"alias_name,omptempty"`
-	AliasParentModelId  *Many2One  `xmlrpc:"alias_parent_model_id,omptempty"`
-	AliasParentThreadId *Int       `xmlrpc:"alias_parent_thread_id,omptempty"`
-	AliasUserId         *Many2One  `xmlrpc:"alias_user_id,omptempty"`
-	CreateDate          *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid           *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
-	Id                  *Int       `xmlrpc:"id,omptempty"`
-	WriteDate           *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid            *Many2One  `xmlrpc:"write_uid,omptempty"`
+	AliasId *Many2One `xmlrpc:"alias_id,omptempty"`
 }
 
 // MailAliasMixins represents array of mail.alias.mixin model.

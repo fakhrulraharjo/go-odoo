@@ -20,6 +20,7 @@ type IrModuleModule struct {
 	DescriptionHtml  *String    `xmlrpc:"description_html,omptempty"`
 	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
 	ExclusionIds     *Relation  `xmlrpc:"exclusion_ids,omptempty"`
+	HasIap           *Bool      `xmlrpc:"has_iap,omptempty"`
 	Icon             *String    `xmlrpc:"icon,omptempty"`
 	IconImage        *String    `xmlrpc:"icon_image,omptempty"`
 	Id               *Int       `xmlrpc:"id,omptempty"`
@@ -35,6 +36,7 @@ type IrModuleModule struct {
 	Shortdesc        *String    `xmlrpc:"shortdesc,omptempty"`
 	State            *Selection `xmlrpc:"state,omptempty"`
 	Summary          *String    `xmlrpc:"summary,omptempty"`
+	ToBuy            *Bool      `xmlrpc:"to_buy,omptempty"`
 	Url              *String    `xmlrpc:"url,omptempty"`
 	ViewsByModule    *String    `xmlrpc:"views_by_module,omptempty"`
 	Website          *String    `xmlrpc:"website,omptempty"`

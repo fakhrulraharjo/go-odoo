@@ -6,17 +6,18 @@ import (
 
 // IrServerObjectLines represents ir.server.object.lines model.
 type IrServerObjectLines struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	Col1        *Many2One  `xmlrpc:"col1,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	ServerId    *Many2One  `xmlrpc:"server_id,omptempty"`
-	Type        *Selection `xmlrpc:"type,omptempty"`
-	Value       *String    `xmlrpc:"value,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
+	Col1           *Many2One  `xmlrpc:"col1,omptempty"`
+	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
+	EvaluationType *Selection `xmlrpc:"evaluation_type,omptempty"`
+	Id             *Int       `xmlrpc:"id,omptempty"`
+	ResourceRef    *String    `xmlrpc:"resource_ref,omptempty"`
+	ServerId       *Many2One  `xmlrpc:"server_id,omptempty"`
+	Value          *String    `xmlrpc:"value,omptempty"`
+	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // IrServerObjectLiness represents array of ir.server.object.lines model.

@@ -20,7 +20,6 @@ type WebEditorConverterTest struct {
 	Integer      *Int       `xmlrpc:"integer,omptempty"`
 	Many2One     *Many2One  `xmlrpc:"many2one,omptempty"`
 	Numeric      *Float     `xmlrpc:"numeric,omptempty"`
-	Selection    *Selection `xmlrpc:"selection,omptempty"`
 	SelectionStr *Selection `xmlrpc:"selection_str,omptempty"`
 	Text         *String    `xmlrpc:"text,omptempty"`
 	WriteDate    *Time      `xmlrpc:"write_date,omptempty"`

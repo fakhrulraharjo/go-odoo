@@ -11,8 +11,6 @@ type StockChangeProductQty struct {
 	CreateUid           *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName         *String   `xmlrpc:"display_name,omptempty"`
 	Id                  *Int      `xmlrpc:"id,omptempty"`
-	LocationId          *Many2One `xmlrpc:"location_id,omptempty"`
-	LotId               *Many2One `xmlrpc:"lot_id,omptempty"`
 	NewQuantity         *Float    `xmlrpc:"new_quantity,omptempty"`
 	ProductId           *Many2One `xmlrpc:"product_id,omptempty"`
 	ProductTmplId       *Many2One `xmlrpc:"product_tmpl_id,omptempty"`

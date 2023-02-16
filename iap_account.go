@@ -8,7 +8,7 @@ import (
 type IapAccount struct {
 	LastUpdate   *Time     `xmlrpc:"__last_update,omptempty"`
 	AccountToken *String   `xmlrpc:"account_token,omptempty"`
-	CompanyId    *Many2One `xmlrpc:"company_id,omptempty"`
+	CompanyIds   *Relation `xmlrpc:"company_ids,omptempty"`
 	CreateDate   *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid    *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName  *String   `xmlrpc:"display_name,omptempty"`

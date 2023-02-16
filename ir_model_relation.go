@@ -9,8 +9,6 @@ type IrModelRelation struct {
 	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
 	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DateInit    *Time     `xmlrpc:"date_init,omptempty"`
-	DateUpdate  *Time     `xmlrpc:"date_update,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`
 	Id          *Int      `xmlrpc:"id,omptempty"`
 	Model       *Many2One `xmlrpc:"model,omptempty"`

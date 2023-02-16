@@ -14,11 +14,10 @@ type ResourceCalendarLeaves struct {
 	DateFrom    *Time      `xmlrpc:"date_from,omptempty"`
 	DateTo      *Time      `xmlrpc:"date_to,omptempty"`
 	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	HolidayId   *Many2One  `xmlrpc:"holiday_id,omptempty"`
 	Id          *Int       `xmlrpc:"id,omptempty"`
 	Name        *String    `xmlrpc:"name,omptempty"`
 	ResourceId  *Many2One  `xmlrpc:"resource_id,omptempty"`
-	Tz          *Selection `xmlrpc:"tz,omptempty"`
+	TimeType    *Selection `xmlrpc:"time_type,omptempty"`
 	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
 }

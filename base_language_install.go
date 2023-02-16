@@ -6,16 +6,16 @@ import (
 
 // BaseLanguageInstall represents base.language.install model.
 type BaseLanguageInstall struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	Lang        *Selection `xmlrpc:"lang,omptempty"`
-	Overwrite   *Bool      `xmlrpc:"overwrite,omptempty"`
-	State       *Selection `xmlrpc:"state,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName *String   `xmlrpc:"display_name,omptempty"`
+	FirstLangId *Many2One `xmlrpc:"first_lang_id,omptempty"`
+	Id          *Int      `xmlrpc:"id,omptempty"`
+	LangIds     *Relation `xmlrpc:"lang_ids,omptempty"`
+	Overwrite   *Bool     `xmlrpc:"overwrite,omptempty"`
+	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // BaseLanguageInstalls represents array of base.language.install model.

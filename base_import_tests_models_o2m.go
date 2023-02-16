@@ -11,6 +11,7 @@ type BaseImportTestsModelsO2M struct {
 	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`
 	Id          *Int      `xmlrpc:"id,omptempty"`
+	Name        *String   `xmlrpc:"name,omptempty"`
 	Value       *Relation `xmlrpc:"value,omptempty"`
 	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`

@@ -6,18 +6,17 @@ import (
 
 // MailShortcode represents mail.shortcode model.
 type MailShortcode struct {
-	LastUpdate    *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate    *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid     *Many2One  `xmlrpc:"create_uid,omptempty"`
-	Description   *String    `xmlrpc:"description,omptempty"`
-	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
-	Id            *Int       `xmlrpc:"id,omptempty"`
-	ShortcodeType *Selection `xmlrpc:"shortcode_type,omptempty"`
-	Source        *String    `xmlrpc:"source,omptempty"`
-	Substitution  *String    `xmlrpc:"substitution,omptempty"`
-	UnicodeSource *String    `xmlrpc:"unicode_source,omptempty"`
-	WriteDate     *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid      *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate   *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate   *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid    *Many2One `xmlrpc:"create_uid,omptempty"`
+	Description  *String   `xmlrpc:"description,omptempty"`
+	DisplayName  *String   `xmlrpc:"display_name,omptempty"`
+	Id           *Int      `xmlrpc:"id,omptempty"`
+	MessageIds   *Many2One `xmlrpc:"message_ids,omptempty"`
+	Source       *String   `xmlrpc:"source,omptempty"`
+	Substitution *String   `xmlrpc:"substitution,omptempty"`
+	WriteDate    *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid     *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // MailShortcodes represents array of mail.shortcode model.

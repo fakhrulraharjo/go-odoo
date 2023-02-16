@@ -6,29 +6,31 @@ import (
 
 // IrActionsReport represents ir.actions.report model.
 type IrActionsReport struct {
-	LastUpdate      *Time      `xmlrpc:"__last_update,omptempty"`
-	Attachment      *String    `xmlrpc:"attachment,omptempty"`
-	AttachmentUse   *Bool      `xmlrpc:"attachment_use,omptempty"`
-	BindingModelId  *Many2One  `xmlrpc:"binding_model_id,omptempty"`
-	BindingType     *Selection `xmlrpc:"binding_type,omptempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
-	GroupsId        *Relation  `xmlrpc:"groups_id,omptempty"`
-	Help            *String    `xmlrpc:"help,omptempty"`
-	Id              *Int       `xmlrpc:"id,omptempty"`
-	Model           *String    `xmlrpc:"model,omptempty"`
-	Multi           *Bool      `xmlrpc:"multi,omptempty"`
-	Name            *String    `xmlrpc:"name,omptempty"`
-	PaperformatId   *Many2One  `xmlrpc:"paperformat_id,omptempty"`
-	PrintReportName *String    `xmlrpc:"print_report_name,omptempty"`
-	ReportFile      *String    `xmlrpc:"report_file,omptempty"`
-	ReportName      *String    `xmlrpc:"report_name,omptempty"`
-	ReportType      *Selection `xmlrpc:"report_type,omptempty"`
-	Type            *String    `xmlrpc:"type,omptempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
-	XmlId           *String    `xmlrpc:"xml_id,omptempty"`
+	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
+	Attachment       *String    `xmlrpc:"attachment,omptempty"`
+	AttachmentUse    *Bool      `xmlrpc:"attachment_use,omptempty"`
+	BindingModelId   *Many2One  `xmlrpc:"binding_model_id,omptempty"`
+	BindingType      *Selection `xmlrpc:"binding_type,omptempty"`
+	BindingViewTypes *String    `xmlrpc:"binding_view_types,omptempty"`
+	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
+	GroupsId         *Relation  `xmlrpc:"groups_id,omptempty"`
+	Help             *String    `xmlrpc:"help,omptempty"`
+	Id               *Int       `xmlrpc:"id,omptempty"`
+	Model            *String    `xmlrpc:"model,omptempty"`
+	ModelId          *Many2One  `xmlrpc:"model_id,omptempty"`
+	Multi            *Bool      `xmlrpc:"multi,omptempty"`
+	Name             *String    `xmlrpc:"name,omptempty"`
+	PaperformatId    *Many2One  `xmlrpc:"paperformat_id,omptempty"`
+	PrintReportName  *String    `xmlrpc:"print_report_name,omptempty"`
+	ReportFile       *String    `xmlrpc:"report_file,omptempty"`
+	ReportName       *String    `xmlrpc:"report_name,omptempty"`
+	ReportType       *Selection `xmlrpc:"report_type,omptempty"`
+	Type             *String    `xmlrpc:"type,omptempty"`
+	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
+	XmlId            *String    `xmlrpc:"xml_id,omptempty"`
 }
 
 // IrActionsReports represents array of ir.actions.report model.

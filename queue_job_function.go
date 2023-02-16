@@ -6,12 +6,18 @@ import (
 
 // QueueJobFunction represents queue.job.function model.
 type QueueJobFunction struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	Channel     *String   `xmlrpc:"channel,omptempty"`
-	ChannelId   *Many2One `xmlrpc:"channel_id,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
+	LastUpdate        *Time       `xmlrpc:"__last_update,omptempty"`
+	Channel           *String     `xmlrpc:"channel,omptempty"`
+	ChannelId         *Many2One   `xmlrpc:"channel_id,omptempty"`
+	DisplayName       *String     `xmlrpc:"display_name,omptempty"`
+	EditRelatedAction *String     `xmlrpc:"edit_related_action,omptempty"`
+	EditRetryPattern  *String     `xmlrpc:"edit_retry_pattern,omptempty"`
+	Id                *Int        `xmlrpc:"id,omptempty"`
+	Method            *String     `xmlrpc:"method,omptempty"`
+	ModelId           *Many2One   `xmlrpc:"model_id,omptempty"`
+	Name              *String     `xmlrpc:"name,omptempty"`
+	RelatedAction     interface{} `xmlrpc:"related_action,omptempty"`
+	RetryPattern      interface{} `xmlrpc:"retry_pattern,omptempty"`
 }
 
 // QueueJobFunctions represents array of queue.job.function model.

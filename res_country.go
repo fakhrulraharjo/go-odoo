@@ -16,14 +16,16 @@ type ResCountry struct {
 	CurrencyId      *Many2One  `xmlrpc:"currency_id,omptempty"`
 	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
 	Id              *Int       `xmlrpc:"id,omptempty"`
-	Image           *String    `xmlrpc:"image,omptempty"`
+	ImageUrl        *String    `xmlrpc:"image_url,omptempty"`
 	Name            *String    `xmlrpc:"name,omptempty"`
 	NamePosition    *Selection `xmlrpc:"name_position,omptempty"`
 	PhoneCode       *Int       `xmlrpc:"phone_code,omptempty"`
 	StateIds        *Relation  `xmlrpc:"state_ids,omptempty"`
+	StateRequired   *Bool      `xmlrpc:"state_required,omptempty"`
 	VatLabel        *String    `xmlrpc:"vat_label,omptempty"`
 	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
+	ZipRequired     *Bool      `xmlrpc:"zip_required,omptempty"`
 }
 
 // ResCountrys represents array of res.country model.

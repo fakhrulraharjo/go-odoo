@@ -20,7 +20,7 @@ type IrLogging struct {
 	Path        *String    `xmlrpc:"path,omptempty"`
 	Type        *Selection `xmlrpc:"type,omptempty"`
 	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	WriteUid    *Int       `xmlrpc:"write_uid,omptempty"`
 }
 
 // IrLoggings represents array of ir.logging model.

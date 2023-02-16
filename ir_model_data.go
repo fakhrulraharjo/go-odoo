@@ -10,8 +10,6 @@ type IrModelData struct {
 	CompleteName *String   `xmlrpc:"complete_name,omptempty"`
 	CreateDate   *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid    *Many2One `xmlrpc:"create_uid,omptempty"`
-	DateInit     *Time     `xmlrpc:"date_init,omptempty"`
-	DateUpdate   *Time     `xmlrpc:"date_update,omptempty"`
 	DisplayName  *String   `xmlrpc:"display_name,omptempty"`
 	Id           *Int      `xmlrpc:"id,omptempty"`
 	Model        *String   `xmlrpc:"model,omptempty"`
@@ -19,7 +17,7 @@ type IrModelData struct {
 	Name         *String   `xmlrpc:"name,omptempty"`
 	Noupdate     *Bool     `xmlrpc:"noupdate,omptempty"`
 	Reference    *String   `xmlrpc:"reference,omptempty"`
-	ResId        *Int      `xmlrpc:"res_id,omptempty"`
+	ResId        *Many2One `xmlrpc:"res_id,omptempty"`
 	WriteDate    *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid     *Many2One `xmlrpc:"write_uid,omptempty"`
 }

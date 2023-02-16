@@ -9,11 +9,10 @@ type IrModelConstraint struct {
 	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
 	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DateInit    *Time     `xmlrpc:"date_init,omptempty"`
-	DateUpdate  *Time     `xmlrpc:"date_update,omptempty"`
 	Definition  *String   `xmlrpc:"definition,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`
 	Id          *Int      `xmlrpc:"id,omptempty"`
+	Message     *String   `xmlrpc:"message,omptempty"`
 	Model       *Many2One `xmlrpc:"model,omptempty"`
 	Module      *Many2One `xmlrpc:"module,omptempty"`
 	Name        *String   `xmlrpc:"name,omptempty"`

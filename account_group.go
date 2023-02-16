@@ -6,18 +6,19 @@ import (
 
 // AccountGroup represents account.group model.
 type AccountGroup struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CodePrefix  *String   `xmlrpc:"code_prefix,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	ParentId    *Many2One `xmlrpc:"parent_id,omptempty"`
-	ParentLeft  *Int      `xmlrpc:"parent_left,omptempty"`
-	ParentRight *Int      `xmlrpc:"parent_right,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate      *Time     `xmlrpc:"__last_update,omptempty"`
+	CodePrefixEnd   *String   `xmlrpc:"code_prefix_end,omptempty"`
+	CodePrefixStart *String   `xmlrpc:"code_prefix_start,omptempty"`
+	CompanyId       *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate      *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid       *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName     *String   `xmlrpc:"display_name,omptempty"`
+	Id              *Int      `xmlrpc:"id,omptempty"`
+	Name            *String   `xmlrpc:"name,omptempty"`
+	ParentId        *Many2One `xmlrpc:"parent_id,omptempty"`
+	ParentPath      *String   `xmlrpc:"parent_path,omptempty"`
+	WriteDate       *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid        *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountGroups represents array of account.group model.

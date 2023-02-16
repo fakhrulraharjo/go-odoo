@@ -6,25 +6,22 @@ import (
 
 // StockQuantPackage represents stock.quant.package model.
 type StockQuantPackage struct {
-	LastUpdate                   *Time     `xmlrpc:"__last_update,omptempty"`
-	CompanyId                    *Many2One `xmlrpc:"company_id,omptempty"`
-	CreateDate                   *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid                    *Many2One `xmlrpc:"create_uid,omptempty"`
-	CurrentDestinationLocationId *Many2One `xmlrpc:"current_destination_location_id,omptempty"`
-	CurrentPickingId             *Bool     `xmlrpc:"current_picking_id,omptempty"`
-	CurrentPickingMoveLineIds    *Relation `xmlrpc:"current_picking_move_line_ids,omptempty"`
-	CurrentSourceLocationId      *Many2One `xmlrpc:"current_source_location_id,omptempty"`
-	DisplayName                  *String   `xmlrpc:"display_name,omptempty"`
-	Id                           *Int      `xmlrpc:"id,omptempty"`
-	IsProcessed                  *Bool     `xmlrpc:"is_processed,omptempty"`
-	LocationId                   *Many2One `xmlrpc:"location_id,omptempty"`
-	MoveLineIds                  *Relation `xmlrpc:"move_line_ids,omptempty"`
-	Name                         *String   `xmlrpc:"name,omptempty"`
-	OwnerId                      *Many2One `xmlrpc:"owner_id,omptempty"`
-	PackagingId                  *Many2One `xmlrpc:"packaging_id,omptempty"`
-	QuantIds                     *Relation `xmlrpc:"quant_ids,omptempty"`
-	WriteDate                    *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid                     *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate    *Time      `xmlrpc:"__last_update,omptempty"`
+	CompanyId     *Many2One  `xmlrpc:"company_id,omptempty"`
+	CreateDate    *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid     *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
+	Id            *Int       `xmlrpc:"id,omptempty"`
+	LocationId    *Many2One  `xmlrpc:"location_id,omptempty"`
+	Name          *String    `xmlrpc:"name,omptempty"`
+	OwnerId       *Many2One  `xmlrpc:"owner_id,omptempty"`
+	PackDate      *Time      `xmlrpc:"pack_date,omptempty"`
+	PackageTypeId *Many2One  `xmlrpc:"package_type_id,omptempty"`
+	PackageUse    *Selection `xmlrpc:"package_use,omptempty"`
+	QuantIds      *Relation  `xmlrpc:"quant_ids,omptempty"`
+	ValidSscc     *Bool      `xmlrpc:"valid_sscc,omptempty"`
+	WriteDate     *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid      *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // StockQuantPackages represents array of stock.quant.package model.

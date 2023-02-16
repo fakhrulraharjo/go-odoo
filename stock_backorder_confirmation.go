@@ -6,14 +6,16 @@ import (
 
 // StockBackorderConfirmation represents stock.backorder.confirmation model.
 type StockBackorderConfirmation struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	PickIds     *Relation `xmlrpc:"pick_ids,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                   *Time     `xmlrpc:"__last_update,omptempty"`
+	BackorderConfirmationLineIds *Relation `xmlrpc:"backorder_confirmation_line_ids,omptempty"`
+	CreateDate                   *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid                    *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName                  *String   `xmlrpc:"display_name,omptempty"`
+	Id                           *Int      `xmlrpc:"id,omptempty"`
+	PickIds                      *Relation `xmlrpc:"pick_ids,omptempty"`
+	ShowTransfers                *Bool     `xmlrpc:"show_transfers,omptempty"`
+	WriteDate                    *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid                     *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // StockBackorderConfirmations represents array of stock.backorder.confirmation model.

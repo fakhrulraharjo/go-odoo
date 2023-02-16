@@ -6,27 +6,43 @@ import (
 
 // AccountReconcileModelTemplate represents account.reconcile.model.template model.
 type AccountReconcileModelTemplate struct {
-	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
-	AccountId        *Many2One  `xmlrpc:"account_id,omptempty"`
-	Amount           *Float     `xmlrpc:"amount,omptempty"`
-	AmountType       *Selection `xmlrpc:"amount_type,omptempty"`
-	ChartTemplateId  *Many2One  `xmlrpc:"chart_template_id,omptempty"`
-	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
-	HasSecondLine    *Bool      `xmlrpc:"has_second_line,omptempty"`
-	Id               *Int       `xmlrpc:"id,omptempty"`
-	Label            *String    `xmlrpc:"label,omptempty"`
-	Name             *String    `xmlrpc:"name,omptempty"`
-	SecondAccountId  *Many2One  `xmlrpc:"second_account_id,omptempty"`
-	SecondAmount     *Float     `xmlrpc:"second_amount,omptempty"`
-	SecondAmountType *Selection `xmlrpc:"second_amount_type,omptempty"`
-	SecondLabel      *String    `xmlrpc:"second_label,omptempty"`
-	SecondTaxId      *Many2One  `xmlrpc:"second_tax_id,omptempty"`
-	Sequence         *Int       `xmlrpc:"sequence,omptempty"`
-	TaxId            *Many2One  `xmlrpc:"tax_id,omptempty"`
-	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                 *Time      `xmlrpc:"__last_update,omptempty"`
+	AllowPaymentTolerance      *Bool      `xmlrpc:"allow_payment_tolerance,omptempty"`
+	AutoReconcile              *Bool      `xmlrpc:"auto_reconcile,omptempty"`
+	ChartTemplateId            *Many2One  `xmlrpc:"chart_template_id,omptempty"`
+	CreateDate                 *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                  *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DecimalSeparator           *String    `xmlrpc:"decimal_separator,omptempty"`
+	DisplayName                *String    `xmlrpc:"display_name,omptempty"`
+	Id                         *Int       `xmlrpc:"id,omptempty"`
+	LineIds                    *Relation  `xmlrpc:"line_ids,omptempty"`
+	MatchAmount                *Selection `xmlrpc:"match_amount,omptempty"`
+	MatchAmountMax             *Float     `xmlrpc:"match_amount_max,omptempty"`
+	MatchAmountMin             *Float     `xmlrpc:"match_amount_min,omptempty"`
+	MatchJournalIds            *Relation  `xmlrpc:"match_journal_ids,omptempty"`
+	MatchLabel                 *Selection `xmlrpc:"match_label,omptempty"`
+	MatchLabelParam            *String    `xmlrpc:"match_label_param,omptempty"`
+	MatchNature                *Selection `xmlrpc:"match_nature,omptempty"`
+	MatchNote                  *Selection `xmlrpc:"match_note,omptempty"`
+	MatchNoteParam             *String    `xmlrpc:"match_note_param,omptempty"`
+	MatchPartner               *Bool      `xmlrpc:"match_partner,omptempty"`
+	MatchPartnerCategoryIds    *Relation  `xmlrpc:"match_partner_category_ids,omptempty"`
+	MatchPartnerIds            *Relation  `xmlrpc:"match_partner_ids,omptempty"`
+	MatchSameCurrency          *Bool      `xmlrpc:"match_same_currency,omptempty"`
+	MatchTextLocationLabel     *Bool      `xmlrpc:"match_text_location_label,omptempty"`
+	MatchTextLocationNote      *Bool      `xmlrpc:"match_text_location_note,omptempty"`
+	MatchTextLocationReference *Bool      `xmlrpc:"match_text_location_reference,omptempty"`
+	MatchTransactionType       *Selection `xmlrpc:"match_transaction_type,omptempty"`
+	MatchTransactionTypeParam  *String    `xmlrpc:"match_transaction_type_param,omptempty"`
+	MatchingOrder              *Selection `xmlrpc:"matching_order,omptempty"`
+	Name                       *String    `xmlrpc:"name,omptempty"`
+	PaymentToleranceParam      *Float     `xmlrpc:"payment_tolerance_param,omptempty"`
+	PaymentToleranceType       *Selection `xmlrpc:"payment_tolerance_type,omptempty"`
+	RuleType                   *Selection `xmlrpc:"rule_type,omptempty"`
+	Sequence                   *Int       `xmlrpc:"sequence,omptempty"`
+	ToCheck                    *Bool      `xmlrpc:"to_check,omptempty"`
+	WriteDate                  *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                   *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountReconcileModelTemplates represents array of account.reconcile.model.template model.

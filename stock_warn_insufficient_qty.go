@@ -6,12 +6,11 @@ import (
 
 // StockWarnInsufficientQty represents stock.warn.insufficient.qty model.
 type StockWarnInsufficientQty struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	LocationId  *Many2One `xmlrpc:"location_id,omptempty"`
-	ProductId   *Many2One `xmlrpc:"product_id,omptempty"`
-	QuantIds    *Relation `xmlrpc:"quant_ids,omptempty"`
+	LocationId     *Many2One `xmlrpc:"location_id,omptempty"`
+	ProductId      *Many2One `xmlrpc:"product_id,omptempty"`
+	ProductUomName *String   `xmlrpc:"product_uom_name,omptempty"`
+	QuantIds       *Relation `xmlrpc:"quant_ids,omptempty"`
+	Quantity       *Float    `xmlrpc:"quantity,omptempty"`
 }
 
 // StockWarnInsufficientQtys represents array of stock.warn.insufficient.qty model.

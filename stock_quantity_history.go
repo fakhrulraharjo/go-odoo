@@ -6,15 +6,14 @@ import (
 
 // StockQuantityHistory represents stock.quantity.history model.
 type StockQuantityHistory struct {
-	LastUpdate    *Time      `xmlrpc:"__last_update,omptempty"`
-	ComputeAtDate *Selection `xmlrpc:"compute_at_date,omptempty"`
-	CreateDate    *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid     *Many2One  `xmlrpc:"create_uid,omptempty"`
-	Date          *Time      `xmlrpc:"date,omptempty"`
-	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
-	Id            *Int       `xmlrpc:"id,omptempty"`
-	WriteDate     *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid      *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate        *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate        *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid         *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName       *String   `xmlrpc:"display_name,omptempty"`
+	Id                *Int      `xmlrpc:"id,omptempty"`
+	InventoryDatetime *Time     `xmlrpc:"inventory_datetime,omptempty"`
+	WriteDate         *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid          *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // StockQuantityHistorys represents array of stock.quantity.history model.

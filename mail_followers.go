@@ -7,11 +7,13 @@ import (
 // MailFollowers represents mail.followers model.
 type MailFollowers struct {
 	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	ChannelId   *Many2One `xmlrpc:"channel_id,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`
+	Email       *String   `xmlrpc:"email,omptempty"`
 	Id          *Int      `xmlrpc:"id,omptempty"`
+	IsActive    *Bool     `xmlrpc:"is_active,omptempty"`
+	Name        *String   `xmlrpc:"name,omptempty"`
 	PartnerId   *Many2One `xmlrpc:"partner_id,omptempty"`
-	ResId       *Int      `xmlrpc:"res_id,omptempty"`
+	ResId       *Many2One `xmlrpc:"res_id,omptempty"`
 	ResModel    *String   `xmlrpc:"res_model,omptempty"`
 	SubtypeIds  *Relation `xmlrpc:"subtype_ids,omptempty"`
 }

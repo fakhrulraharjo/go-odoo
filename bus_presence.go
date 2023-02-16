@@ -8,6 +8,7 @@ import (
 type BusPresence struct {
 	LastUpdate   *Time      `xmlrpc:"__last_update,omptempty"`
 	DisplayName  *String    `xmlrpc:"display_name,omptempty"`
+	GuestId      *Many2One  `xmlrpc:"guest_id,omptempty"`
 	Id           *Int       `xmlrpc:"id,omptempty"`
 	LastPoll     *Time      `xmlrpc:"last_poll,omptempty"`
 	LastPresence *Time      `xmlrpc:"last_presence,omptempty"`

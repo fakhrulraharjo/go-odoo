@@ -6,15 +6,21 @@ import (
 
 // AccountTaxGroup represents account.tax.group model.
 type AccountTaxGroup struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	Sequence    *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                         *Time     `xmlrpc:"__last_update,omptempty"`
+	CountryCode                        *String   `xmlrpc:"country_code,omptempty"`
+	CountryId                          *Many2One `xmlrpc:"country_id,omptempty"`
+	CreateDate                         *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid                          *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName                        *String   `xmlrpc:"display_name,omptempty"`
+	Id                                 *Int      `xmlrpc:"id,omptempty"`
+	Name                               *String   `xmlrpc:"name,omptempty"`
+	PrecedingSubtotal                  *String   `xmlrpc:"preceding_subtotal,omptempty"`
+	PropertyAdvanceTaxPaymentAccountId *Many2One `xmlrpc:"property_advance_tax_payment_account_id,omptempty"`
+	PropertyTaxPayableAccountId        *Many2One `xmlrpc:"property_tax_payable_account_id,omptempty"`
+	PropertyTaxReceivableAccountId     *Many2One `xmlrpc:"property_tax_receivable_account_id,omptempty"`
+	Sequence                           *Int      `xmlrpc:"sequence,omptempty"`
+	WriteDate                          *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid                           *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountTaxGroups represents array of account.tax.group model.

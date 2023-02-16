@@ -6,19 +6,22 @@ import (
 
 // ProductAttributeValue represents product.attribute.value model.
 type ProductAttributeValue struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	AttributeId *Many2One `xmlrpc:"attribute_id,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	PriceExtra  *Float    `xmlrpc:"price_extra,omptempty"`
-	PriceIds    *Relation `xmlrpc:"price_ids,omptempty"`
-	ProductIds  *Relation `xmlrpc:"product_ids,omptempty"`
-	Sequence    *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
+	AttributeId         *Many2One  `xmlrpc:"attribute_id,omptempty"`
+	Color               *Int       `xmlrpc:"color,omptempty"`
+	CreateDate          *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid           *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
+	DisplayType         *Selection `xmlrpc:"display_type,omptempty"`
+	HtmlColor           *String    `xmlrpc:"html_color,omptempty"`
+	Id                  *Int       `xmlrpc:"id,omptempty"`
+	IsCustom            *Bool      `xmlrpc:"is_custom,omptempty"`
+	IsUsedOnProducts    *Bool      `xmlrpc:"is_used_on_products,omptempty"`
+	Name                *String    `xmlrpc:"name,omptempty"`
+	PavAttributeLineIds *Relation  `xmlrpc:"pav_attribute_line_ids,omptempty"`
+	Sequence            *Int       `xmlrpc:"sequence,omptempty"`
+	WriteDate           *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid            *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProductAttributeValues represents array of product.attribute.value model.

@@ -6,18 +6,21 @@ import (
 
 // PortalWizardUser represents portal.wizard.user model.
 type PortalWizardUser struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Email       *String   `xmlrpc:"email,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	InPortal    *Bool     `xmlrpc:"in_portal,omptempty"`
-	PartnerId   *Many2One `xmlrpc:"partner_id,omptempty"`
-	UserId      *Many2One `xmlrpc:"user_id,omptempty"`
-	WizardId    *Many2One `xmlrpc:"wizard_id,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
+	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName *String    `xmlrpc:"display_name,omptempty"`
+	Email       *String    `xmlrpc:"email,omptempty"`
+	EmailState  *Selection `xmlrpc:"email_state,omptempty"`
+	Id          *Int       `xmlrpc:"id,omptempty"`
+	IsInternal  *Bool      `xmlrpc:"is_internal,omptempty"`
+	IsPortal    *Bool      `xmlrpc:"is_portal,omptempty"`
+	LoginDate   *Time      `xmlrpc:"login_date,omptempty"`
+	PartnerId   *Many2One  `xmlrpc:"partner_id,omptempty"`
+	UserId      *Many2One  `xmlrpc:"user_id,omptempty"`
+	WizardId    *Many2One  `xmlrpc:"wizard_id,omptempty"`
+	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // PortalWizardUsers represents array of portal.wizard.user model.

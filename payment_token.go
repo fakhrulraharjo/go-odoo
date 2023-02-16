@@ -6,21 +6,22 @@ import (
 
 // PaymentToken represents payment.token model.
 type PaymentToken struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	AcquirerId  *Many2One `xmlrpc:"acquirer_id,omptempty"`
-	AcquirerRef *String   `xmlrpc:"acquirer_ref,omptempty"`
-	Active      *Bool     `xmlrpc:"active,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	PartnerId   *Many2One `xmlrpc:"partner_id,omptempty"`
-	PaymentIds  *Relation `xmlrpc:"payment_ids,omptempty"`
-	ShortName   *String   `xmlrpc:"short_name,omptempty"`
-	Verified    *Bool     `xmlrpc:"verified,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
+	Active         *Bool      `xmlrpc:"active,omptempty"`
+	CompanyId      *Many2One  `xmlrpc:"company_id,omptempty"`
+	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
+	Id             *Int       `xmlrpc:"id,omptempty"`
+	PartnerId      *Many2One  `xmlrpc:"partner_id,omptempty"`
+	PaymentDetails *String    `xmlrpc:"payment_details,omptempty"`
+	ProviderCode   *Selection `xmlrpc:"provider_code,omptempty"`
+	ProviderId     *Many2One  `xmlrpc:"provider_id,omptempty"`
+	ProviderRef    *String    `xmlrpc:"provider_ref,omptempty"`
+	TransactionIds *Relation  `xmlrpc:"transaction_ids,omptempty"`
+	Verified       *Bool      `xmlrpc:"verified,omptempty"`
+	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // PaymentTokens represents array of payment.token model.

@@ -6,10 +6,9 @@ import (
 
 // PortalMixin represents portal.mixin model.
 type PortalMixin struct {
-	LastUpdate  *Time   `xmlrpc:"__last_update,omptempty"`
-	DisplayName *String `xmlrpc:"display_name,omptempty"`
-	Id          *Int    `xmlrpc:"id,omptempty"`
-	PortalUrl   *String `xmlrpc:"portal_url,omptempty"`
+	AccessToken   *String `xmlrpc:"access_token,omptempty"`
+	AccessUrl     *String `xmlrpc:"access_url,omptempty"`
+	AccessWarning *String `xmlrpc:"access_warning,omptempty"`
 }
 
 // PortalMixins represents array of portal.mixin model.

@@ -6,14 +6,22 @@ import (
 
 // MailNotification represents mail.notification model.
 type MailNotification struct {
-	LastUpdate    *Time      `xmlrpc:"__last_update,omptempty"`
-	DisplayName   *String    `xmlrpc:"display_name,omptempty"`
-	EmailStatus   *Selection `xmlrpc:"email_status,omptempty"`
-	Id            *Int       `xmlrpc:"id,omptempty"`
-	IsEmail       *Bool      `xmlrpc:"is_email,omptempty"`
-	IsRead        *Bool      `xmlrpc:"is_read,omptempty"`
-	MailMessageId *Many2One  `xmlrpc:"mail_message_id,omptempty"`
-	ResPartnerId  *Many2One  `xmlrpc:"res_partner_id,omptempty"`
+	LastUpdate         *Time      `xmlrpc:"__last_update,omptempty"`
+	AuthorId           *Many2One  `xmlrpc:"author_id,omptempty"`
+	DisplayName        *String    `xmlrpc:"display_name,omptempty"`
+	FailureReason      *String    `xmlrpc:"failure_reason,omptempty"`
+	FailureType        *Selection `xmlrpc:"failure_type,omptempty"`
+	Id                 *Int       `xmlrpc:"id,omptempty"`
+	IsRead             *Bool      `xmlrpc:"is_read,omptempty"`
+	LetterId           *Many2One  `xmlrpc:"letter_id,omptempty"`
+	MailMailId         *Many2One  `xmlrpc:"mail_mail_id,omptempty"`
+	MailMessageId      *Many2One  `xmlrpc:"mail_message_id,omptempty"`
+	NotificationStatus *Selection `xmlrpc:"notification_status,omptempty"`
+	NotificationType   *Selection `xmlrpc:"notification_type,omptempty"`
+	ReadDate           *Time      `xmlrpc:"read_date,omptempty"`
+	ResPartnerId       *Many2One  `xmlrpc:"res_partner_id,omptempty"`
+	SmsId              *Many2One  `xmlrpc:"sms_id,omptempty"`
+	SmsNumber          *String    `xmlrpc:"sms_number,omptempty"`
 }
 
 // MailNotifications represents array of mail.notification model.

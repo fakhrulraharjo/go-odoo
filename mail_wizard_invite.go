@@ -7,7 +7,6 @@ import (
 // MailWizardInvite represents mail.wizard.invite model.
 type MailWizardInvite struct {
 	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	ChannelIds  *Relation `xmlrpc:"channel_ids,omptempty"`
 	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`

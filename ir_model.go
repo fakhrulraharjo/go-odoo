@@ -16,10 +16,15 @@ type IrModel struct {
 	Id                *Int       `xmlrpc:"id,omptempty"`
 	Info              *String    `xmlrpc:"info,omptempty"`
 	InheritedModelIds *Relation  `xmlrpc:"inherited_model_ids,omptempty"`
+	IsMailActivity    *Bool      `xmlrpc:"is_mail_activity,omptempty"`
+	IsMailBlacklist   *Bool      `xmlrpc:"is_mail_blacklist,omptempty"`
 	IsMailThread      *Bool      `xmlrpc:"is_mail_thread,omptempty"`
+	IsMailThreadSms   *Bool      `xmlrpc:"is_mail_thread_sms,omptempty"`
 	Model             *String    `xmlrpc:"model,omptempty"`
 	Modules           *String    `xmlrpc:"modules,omptempty"`
 	Name              *String    `xmlrpc:"name,omptempty"`
+	Order             *String    `xmlrpc:"order,omptempty"`
+	RuleIds           *Relation  `xmlrpc:"rule_ids,omptempty"`
 	State             *Selection `xmlrpc:"state,omptempty"`
 	Transient         *Bool      `xmlrpc:"transient,omptempty"`
 	ViewIds           *Relation  `xmlrpc:"view_ids,omptempty"`

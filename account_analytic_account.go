@@ -10,33 +10,34 @@ type AccountAnalyticAccount struct {
 	Active                   *Bool     `xmlrpc:"active,omptempty"`
 	Balance                  *Float    `xmlrpc:"balance,omptempty"`
 	Code                     *String   `xmlrpc:"code,omptempty"`
+	Color                    *Int      `xmlrpc:"color,omptempty"`
 	CompanyId                *Many2One `xmlrpc:"company_id,omptempty"`
-	CompanyUomId             *Many2One `xmlrpc:"company_uom_id,omptempty"`
 	CreateDate               *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid                *Many2One `xmlrpc:"create_uid,omptempty"`
 	Credit                   *Float    `xmlrpc:"credit,omptempty"`
 	CurrencyId               *Many2One `xmlrpc:"currency_id,omptempty"`
 	Debit                    *Float    `xmlrpc:"debit,omptempty"`
 	DisplayName              *String   `xmlrpc:"display_name,omptempty"`
+	HasMessage               *Bool     `xmlrpc:"has_message,omptempty"`
 	Id                       *Int      `xmlrpc:"id,omptempty"`
+	InvoiceCount             *Int      `xmlrpc:"invoice_count,omptempty"`
 	LineIds                  *Relation `xmlrpc:"line_ids,omptempty"`
-	MachineProjectName       *String   `xmlrpc:"machine_project_name,omptempty"`
-	MessageChannelIds        *Relation `xmlrpc:"message_channel_ids,omptempty"`
+	MessageAttachmentCount   *Int      `xmlrpc:"message_attachment_count,omptempty"`
 	MessageFollowerIds       *Relation `xmlrpc:"message_follower_ids,omptempty"`
+	MessageHasError          *Bool     `xmlrpc:"message_has_error,omptempty"`
+	MessageHasErrorCounter   *Int      `xmlrpc:"message_has_error_counter,omptempty"`
+	MessageHasSmsError       *Bool     `xmlrpc:"message_has_sms_error,omptempty"`
 	MessageIds               *Relation `xmlrpc:"message_ids,omptempty"`
 	MessageIsFollower        *Bool     `xmlrpc:"message_is_follower,omptempty"`
-	MessageLastPost          *Time     `xmlrpc:"message_last_post,omptempty"`
+	MessageMainAttachmentId  *Many2One `xmlrpc:"message_main_attachment_id,omptempty"`
 	MessageNeedaction        *Bool     `xmlrpc:"message_needaction,omptempty"`
 	MessageNeedactionCounter *Int      `xmlrpc:"message_needaction_counter,omptempty"`
 	MessagePartnerIds        *Relation `xmlrpc:"message_partner_ids,omptempty"`
-	MessageUnread            *Bool     `xmlrpc:"message_unread,omptempty"`
-	MessageUnreadCounter     *Int      `xmlrpc:"message_unread_counter,omptempty"`
 	Name                     *String   `xmlrpc:"name,omptempty"`
 	PartnerId                *Many2One `xmlrpc:"partner_id,omptempty"`
-	ProjectCount             *Int      `xmlrpc:"project_count,omptempty"`
-	ProjectCreated           *Bool     `xmlrpc:"project_created,omptempty"`
-	ProjectIds               *Relation `xmlrpc:"project_ids,omptempty"`
-	TagIds                   *Relation `xmlrpc:"tag_ids,omptempty"`
+	PlanId                   *Many2One `xmlrpc:"plan_id,omptempty"`
+	RootPlanId               *Many2One `xmlrpc:"root_plan_id,omptempty"`
+	VendorBillCount          *Int      `xmlrpc:"vendor_bill_count,omptempty"`
 	WebsiteMessageIds        *Relation `xmlrpc:"website_message_ids,omptempty"`
 	WriteDate                *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid                 *Many2One `xmlrpc:"write_uid,omptempty"`

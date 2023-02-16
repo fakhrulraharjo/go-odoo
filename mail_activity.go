@@ -8,20 +8,24 @@ import (
 type MailActivity struct {
 	LastUpdate                *Time      `xmlrpc:"__last_update,omptempty"`
 	ActivityCategory          *Selection `xmlrpc:"activity_category,omptempty"`
+	ActivityDecoration        *Selection `xmlrpc:"activity_decoration,omptempty"`
 	ActivityTypeId            *Many2One  `xmlrpc:"activity_type_id,omptempty"`
-	CalendarEventId           *Many2One  `xmlrpc:"calendar_event_id,omptempty"`
+	Automated                 *Bool      `xmlrpc:"automated,omptempty"`
+	CanWrite                  *Bool      `xmlrpc:"can_write,omptempty"`
+	ChainingType              *Selection `xmlrpc:"chaining_type,omptempty"`
 	CreateDate                *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid                 *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DateDeadline              *Time      `xmlrpc:"date_deadline,omptempty"`
 	DisplayName               *String    `xmlrpc:"display_name,omptempty"`
-	Feedback                  *String    `xmlrpc:"feedback,omptempty"`
 	HasRecommendedActivities  *Bool      `xmlrpc:"has_recommended_activities,omptempty"`
 	Icon                      *String    `xmlrpc:"icon,omptempty"`
 	Id                        *Int       `xmlrpc:"id,omptempty"`
+	MailTemplateIds           *Relation  `xmlrpc:"mail_template_ids,omptempty"`
 	Note                      *String    `xmlrpc:"note,omptempty"`
 	PreviousActivityTypeId    *Many2One  `xmlrpc:"previous_activity_type_id,omptempty"`
 	RecommendedActivityTypeId *Many2One  `xmlrpc:"recommended_activity_type_id,omptempty"`
-	ResId                     *Int       `xmlrpc:"res_id,omptempty"`
+	RequestPartnerId          *Many2One  `xmlrpc:"request_partner_id,omptempty"`
+	ResId                     *Many2One  `xmlrpc:"res_id,omptempty"`
 	ResModel                  *String    `xmlrpc:"res_model,omptempty"`
 	ResModelId                *Many2One  `xmlrpc:"res_model_id,omptempty"`
 	ResName                   *String    `xmlrpc:"res_name,omptempty"`

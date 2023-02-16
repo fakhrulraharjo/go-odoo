@@ -6,17 +6,18 @@ import (
 
 // ProcurementGroup represents procurement.group model.
 type ProcurementGroup struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	MoveType    *Selection `xmlrpc:"move_type,omptempty"`
-	Name        *String    `xmlrpc:"name,omptempty"`
-	PartnerId   *Many2One  `xmlrpc:"partner_id,omptempty"`
-	SaleId      *Many2One  `xmlrpc:"sale_id,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate   *Time      `xmlrpc:"__last_update,omptempty"`
+	CreateDate   *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid    *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName  *String    `xmlrpc:"display_name,omptempty"`
+	Id           *Int       `xmlrpc:"id,omptempty"`
+	MoveType     *Selection `xmlrpc:"move_type,omptempty"`
+	Name         *String    `xmlrpc:"name,omptempty"`
+	PartnerId    *Many2One  `xmlrpc:"partner_id,omptempty"`
+	PosOrderId   *Many2One  `xmlrpc:"pos_order_id,omptempty"`
+	StockMoveIds *Relation  `xmlrpc:"stock_move_ids,omptempty"`
+	WriteDate    *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid     *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProcurementGroups represents array of procurement.group model.

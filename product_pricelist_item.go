@@ -7,6 +7,7 @@ import (
 // ProductPricelistItem represents product.pricelist.item model.
 type ProductPricelistItem struct {
 	LastUpdate      *Time      `xmlrpc:"__last_update,omptempty"`
+	Active          *Bool      `xmlrpc:"active,omptempty"`
 	AppliedOn       *Selection `xmlrpc:"applied_on,omptempty"`
 	Base            *Selection `xmlrpc:"base,omptempty"`
 	BasePricelistId *Many2One  `xmlrpc:"base_pricelist_id,omptempty"`
@@ -21,7 +22,7 @@ type ProductPricelistItem struct {
 	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
 	FixedPrice      *Float     `xmlrpc:"fixed_price,omptempty"`
 	Id              *Int       `xmlrpc:"id,omptempty"`
-	MinQuantity     *Int       `xmlrpc:"min_quantity,omptempty"`
+	MinQuantity     *Float     `xmlrpc:"min_quantity,omptempty"`
 	Name            *String    `xmlrpc:"name,omptempty"`
 	PercentPrice    *Float     `xmlrpc:"percent_price,omptempty"`
 	Price           *String    `xmlrpc:"price,omptempty"`
@@ -33,6 +34,7 @@ type ProductPricelistItem struct {
 	PricelistId     *Many2One  `xmlrpc:"pricelist_id,omptempty"`
 	ProductId       *Many2One  `xmlrpc:"product_id,omptempty"`
 	ProductTmplId   *Many2One  `xmlrpc:"product_tmpl_id,omptempty"`
+	RuleTip         *String    `xmlrpc:"rule_tip,omptempty"`
 	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
 }

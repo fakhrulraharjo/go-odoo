@@ -6,22 +6,23 @@ import (
 
 // MailMessageSubtype represents mail.message.subtype model.
 type MailMessageSubtype struct {
-	LastUpdate    *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate    *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid     *Many2One `xmlrpc:"create_uid,omptempty"`
-	Default       *Bool     `xmlrpc:"default,omptempty"`
-	Description   *String   `xmlrpc:"description,omptempty"`
-	DisplayName   *String   `xmlrpc:"display_name,omptempty"`
-	Hidden        *Bool     `xmlrpc:"hidden,omptempty"`
-	Id            *Int      `xmlrpc:"id,omptempty"`
-	Internal      *Bool     `xmlrpc:"internal,omptempty"`
-	Name          *String   `xmlrpc:"name,omptempty"`
-	ParentId      *Many2One `xmlrpc:"parent_id,omptempty"`
-	RelationField *String   `xmlrpc:"relation_field,omptempty"`
-	ResModel      *String   `xmlrpc:"res_model,omptempty"`
-	Sequence      *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate     *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid      *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate      *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate      *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid       *Many2One `xmlrpc:"create_uid,omptempty"`
+	Default         *Bool     `xmlrpc:"default,omptempty"`
+	Description     *String   `xmlrpc:"description,omptempty"`
+	DisplayName     *String   `xmlrpc:"display_name,omptempty"`
+	Hidden          *Bool     `xmlrpc:"hidden,omptempty"`
+	Id              *Int      `xmlrpc:"id,omptempty"`
+	Internal        *Bool     `xmlrpc:"internal,omptempty"`
+	Name            *String   `xmlrpc:"name,omptempty"`
+	ParentId        *Many2One `xmlrpc:"parent_id,omptempty"`
+	RelationField   *String   `xmlrpc:"relation_field,omptempty"`
+	ResModel        *String   `xmlrpc:"res_model,omptempty"`
+	Sequence        *Int      `xmlrpc:"sequence,omptempty"`
+	TrackRecipients *Bool     `xmlrpc:"track_recipients,omptempty"`
+	WriteDate       *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid        *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // MailMessageSubtypes represents array of mail.message.subtype model.

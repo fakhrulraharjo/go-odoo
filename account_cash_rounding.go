@@ -6,18 +6,20 @@ import (
 
 // AccountCashRounding represents account.cash.rounding model.
 type AccountCashRounding struct {
-	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
-	AccountId      *Many2One  `xmlrpc:"account_id,omptempty"`
-	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
-	Id             *Int       `xmlrpc:"id,omptempty"`
-	Name           *String    `xmlrpc:"name,omptempty"`
-	Rounding       *Float     `xmlrpc:"rounding,omptempty"`
-	RoundingMethod *Selection `xmlrpc:"rounding_method,omptempty"`
-	Strategy       *Selection `xmlrpc:"strategy,omptempty"`
-	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate      *Time      `xmlrpc:"__last_update,omptempty"`
+	CompanyId       *Many2One  `xmlrpc:"company_id,omptempty"`
+	CreateDate      *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid       *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
+	Id              *Int       `xmlrpc:"id,omptempty"`
+	LossAccountId   *Many2One  `xmlrpc:"loss_account_id,omptempty"`
+	Name            *String    `xmlrpc:"name,omptempty"`
+	ProfitAccountId *Many2One  `xmlrpc:"profit_account_id,omptempty"`
+	Rounding        *Float     `xmlrpc:"rounding,omptempty"`
+	RoundingMethod  *Selection `xmlrpc:"rounding_method,omptempty"`
+	Strategy        *Selection `xmlrpc:"strategy,omptempty"`
+	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // AccountCashRoundings represents array of account.cash.rounding model.

@@ -8,12 +8,16 @@ import (
 type BarcodeRule struct {
 	LastUpdate            *Time      `xmlrpc:"__last_update,omptempty"`
 	Alias                 *String    `xmlrpc:"alias,omptempty"`
+	AssociatedUomId       *Many2One  `xmlrpc:"associated_uom_id,omptempty"`
 	BarcodeNomenclatureId *Many2One  `xmlrpc:"barcode_nomenclature_id,omptempty"`
 	CreateDate            *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid             *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DisplayName           *String    `xmlrpc:"display_name,omptempty"`
 	Encoding              *Selection `xmlrpc:"encoding,omptempty"`
+	Gs1ContentType        *Selection `xmlrpc:"gs1_content_type,omptempty"`
+	Gs1DecimalUsage       *Bool      `xmlrpc:"gs1_decimal_usage,omptempty"`
 	Id                    *Int       `xmlrpc:"id,omptempty"`
+	IsGs1Nomenclature     *Bool      `xmlrpc:"is_gs1_nomenclature,omptempty"`
 	Name                  *String    `xmlrpc:"name,omptempty"`
 	Pattern               *String    `xmlrpc:"pattern,omptempty"`
 	Sequence              *Int       `xmlrpc:"sequence,omptempty"`

@@ -6,15 +6,16 @@ import (
 
 // MailActivityMixin represents mail.activity.mixin model.
 type MailActivityMixin struct {
-	LastUpdate           *Time      `xmlrpc:"__last_update,omptempty"`
-	ActivityDateDeadline *Time      `xmlrpc:"activity_date_deadline,omptempty"`
-	ActivityIds          *Relation  `xmlrpc:"activity_ids,omptempty"`
-	ActivityState        *Selection `xmlrpc:"activity_state,omptempty"`
-	ActivitySummary      *String    `xmlrpc:"activity_summary,omptempty"`
-	ActivityTypeId       *Many2One  `xmlrpc:"activity_type_id,omptempty"`
-	ActivityUserId       *Many2One  `xmlrpc:"activity_user_id,omptempty"`
-	DisplayName          *String    `xmlrpc:"display_name,omptempty"`
-	Id                   *Int       `xmlrpc:"id,omptempty"`
+	ActivityDateDeadline        *Time      `xmlrpc:"activity_date_deadline,omptempty"`
+	ActivityExceptionDecoration *Selection `xmlrpc:"activity_exception_decoration,omptempty"`
+	ActivityExceptionIcon       *String    `xmlrpc:"activity_exception_icon,omptempty"`
+	ActivityIds                 *Relation  `xmlrpc:"activity_ids,omptempty"`
+	ActivityState               *Selection `xmlrpc:"activity_state,omptempty"`
+	ActivitySummary             *String    `xmlrpc:"activity_summary,omptempty"`
+	ActivityTypeIcon            *String    `xmlrpc:"activity_type_icon,omptempty"`
+	ActivityTypeId              *Many2One  `xmlrpc:"activity_type_id,omptempty"`
+	ActivityUserId              *Many2One  `xmlrpc:"activity_user_id,omptempty"`
+	MyActivityDateDeadline      *Time      `xmlrpc:"my_activity_date_deadline,omptempty"`
 }
 
 // MailActivityMixins represents array of mail.activity.mixin model.
